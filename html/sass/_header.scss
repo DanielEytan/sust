@@ -25,16 +25,26 @@ header#header {
 			display: inline-block;
 		}
 		ul {
-			display: none;
-			padding-left: 10px;
+			// display: none;
+			padding: 0 10px;
+			height: 0;
+			margin-bottom: 0;
 			li {
 				margin-bottom: 1em;
+				border-top: solid 1px $blue;
 			}
 			&.visible {
 				display: block;
 			}
 		}
 		&.active {
+			ul {
+				transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+				height: 80vh;
+				padding-top: 10px;
+
+			}
+			
 			background: white;
 			div {
 				color: $blue;

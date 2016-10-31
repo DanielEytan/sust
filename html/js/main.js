@@ -5,11 +5,11 @@ $(document).ready(function() {
 	$(".glossary-toggle").click(function() {
 		$("#glossary").toggleClass("visible");
 		$("#main-content").toggleClass("overflow");
-		$("nav").toggleClass("active");
+		// $("nav div").toggleClass("active");
 	});
 	$(".menu-toggle").click(function() {
 		$("nav ul").toggleClass("visible");
 		$("nav").toggleClass("active");
-		
+
 	});
 });
