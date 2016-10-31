@@ -1,0 +1,58 @@
+@font-face {
+    font-family: Plain-Medium;
+    src: url(/font/Plain-Medium.otf);
+}
+
+body {
+	// -webkit-font-smoothing: antialiased;
+	font-family: Plain-Medium, helvetica neue, helvetica, sans-serif;
+	font-size: .9em;
+	line-height: 1.3em;
+	color: $blue;
+	////////////////////////////////////////////////////////// < 500px
+	@media only screen and (min-width : 500px) {
+		
+	}
+	////////////////////////////////////////////////////////// < 800px
+	@media only screen and (min-width : 800px) {
+		font-size: 1em;
+	}
+	////////////////////////////////////////////////////////// < 1300px
+	@media only screen and (min-width : 1300px) {
+		font-size: 1.1em;
+	}
+
+}
+
+h1, p, ul {
+	margin-bottom: 1em;
+}
+
+header#header h1 {
+	font-size: 1.5em;
+}
+h1 {
+	font-size: 1.5em;
+	line-height: 1.2em;
+	margin-bottom: 2em;
+	////////////////////////////////////////////////////////// < 600px
+	@media only screen and (min-width : 600px) {
+		font-size: 1.75em;
+	}
+	////////////////////////////////////////////////////////// < 800px
+	@media only screen and (min-width : 800px) {
+		font-size: 2em;
+	}
+	
+}
+h2 {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	margin: 2em 0 1em;
+}
+h3 {
+	color: $red;
+}
+p {
+	max-width: 600px;
+}

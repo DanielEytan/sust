@@ -1,0 +1,30 @@
+section#glossary {
+
+	@include blue;
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	li {
+		border-top: solid 1px; 
+		margin-bottom: 1em;
+		padding-left: 0;
+		span {
+			display: block;
+			margin-bottom: .5em;
+		}
+	}
+	////////////////////////////////////////////////////////// < 600px
+	@media only screen and (min-width : 600px) {
+		li {
+			span {
+				display: inline-block;
+				width: 80%;
+				vertical-align:top;
+				&:first-of-type {
+					width: 20%;
+				}
+			}
+		}
+	}
+}
