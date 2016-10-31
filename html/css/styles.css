@@ -96,39 +96,57 @@ h1, p, ul {
 header#header h1 {
   font-size: 1.5em;
 }
+@media only screen and (min-width: 800px) {
+  /* line 31, ../sass/_typo.scss */
+  header#header h1 {
+    font-size: 1.8em;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  /* line 31, ../sass/_typo.scss */
+  header#header h1 {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 31, ../sass/_typo.scss */
+  header#header h1 {
+    font-size: 2.5em;
+  }
+}
 
-/* line 34, ../sass/_typo.scss */
+/* line 48, ../sass/_typo.scss */
 h1 {
   font-size: 1.5em;
   line-height: 1.2em;
   margin-bottom: 2em;
 }
 @media only screen and (min-width: 600px) {
-  /* line 34, ../sass/_typo.scss */
+  /* line 48, ../sass/_typo.scss */
   h1 {
     font-size: 1.75em;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 34, ../sass/_typo.scss */
+  /* line 48, ../sass/_typo.scss */
   h1 {
     font-size: 2em;
   }
 }
 
-/* line 48, ../sass/_typo.scss */
+/* line 62, ../sass/_typo.scss */
 h2 {
   font-size: 1.2em;
   line-height: 1.2em;
   margin: 2em 0 1em;
 }
 
-/* line 53, ../sass/_typo.scss */
+/* line 67, ../sass/_typo.scss */
 h3 {
   color: #e45d50;
 }
 
-/* line 56, ../sass/_typo.scss */
+/* line 70, ../sass/_typo.scss */
 p {
   max-width: 600px;
 }
@@ -145,6 +163,12 @@ img {
   max-width: 100%;
 }
 
+/* line 9, ../sass/_global.scss */
+a {
+  text-decoration: none;
+  color: #39499c;
+}
+
 /* line 1, ../sass/_header.scss */
 header#header {
   background: url(/image/header.jpg) no-repeat center center;
@@ -152,69 +176,137 @@ header#header {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
   color: white;
 }
+/* line 9, ../sass/_header.scss */
+header#header h1 {
+  margin: 2em 0 1em;
+}
+/* line 12, ../sass/_header.scss */
+header#header nav {
+  z-index: 99;
+  background: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 19, ../sass/_header.scss */
+header#header nav div {
+  color: #39499c;
+  padding: .15em .5em .2em;
+  margin: 10px 0px 10px 10px;
+  border: solid 1px;
+  display: inline-block;
+}
+/* line 27, ../sass/_header.scss */
+header#header nav ul {
+  display: none;
+  padding-left: 10px;
+}
+/* line 30, ../sass/_header.scss */
+header#header nav ul li {
+  margin-bottom: 1em;
+}
+/* line 33, ../sass/_header.scss */
+header#header nav ul.visible {
+  display: block;
+}
+/* line 37, ../sass/_header.scss */
+header#header nav.active {
+  background: white;
+}
+/* line 39, ../sass/_header.scss */
+header#header nav.active div {
+  color: #39499c;
+}
+@media only screen and (min-width: 800px) {
+  /* line 47, ../sass/_header.scss */
+  header#header #container {
+    position: relative;
+  }
+  /* line 50, ../sass/_header.scss */
+  header#header .title {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+  /* line 58, ../sass/_header.scss */
+  header#header h2 {
+    margin-left: 30px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  /* line 67, ../sass/_header.scss */
+  header#header h2 {
+    margin-left: 70px;
+  }
+}
 
-/* line 2, ../sass/_articles.scss */
-article.intro {
+/* line 2, ../sass/_main-content.scss */
+#main-content.overflow {
+  overflow: no;
+}
+/* line 6, ../sass/_main-content.scss */
+#main-content article.intro {
   background: #39499c;
   color: white;
   -webkit-font-smoothing: antialiased;
 }
-/* line 5, ../sass/_articles.scss */
-article.organisation {
+/* line 9, ../sass/_main-content.scss */
+#main-content article.organisation {
   color: #39499c;
 }
-/* line 7, ../sass/_articles.scss */
-article.organisation .box {
+/* line 11, ../sass/_main-content.scss */
+#main-content article.organisation .box {
   margin-bottom: 1em;
 }
-/* line 8, ../sass/_articles.scss */
-article.organisation .box:first-of-type {
+/* line 12, ../sass/_main-content.scss */
+#main-content article.organisation .box:first-of-type {
   color: red;
 }
-/* line 12, ../sass/_articles.scss */
-article.organisation .box header, article.organisation .box ul {
+/* line 16, ../sass/_main-content.scss */
+#main-content article.organisation .box header, #main-content article.organisation .box ul {
   border: solid 2px;
 }
-/* line 16, ../sass/_articles.scss */
-.group article.organisation .box .box header, .group article.organisation .box ul {
+/* line 20, ../sass/_main-content.scss */
+.group #main-content article.organisation .box .box header, .group #main-content article.organisation .box ul {
   border: solid 1px;
 }
-/* line 20, ../sass/_articles.scss */
-article.organisation .box header {
+/* line 24, ../sass/_main-content.scss */
+#main-content article.organisation .box header {
   padding: 10px;
 }
-/* line 23, ../sass/_articles.scss */
-article.organisation .box ul {
+/* line 27, ../sass/_main-content.scss */
+#main-content article.organisation .box ul {
   border-top: 0;
   padding: 10px 10px 10px 1.8em;
 }
-/* line 28, ../sass/_articles.scss */
-article.organisation .box h2 {
+/* line 32, ../sass/_main-content.scss */
+#main-content article.organisation .box h2 {
   margin: 0 0 1em;
 }
-/* line 33, ../sass/_articles.scss */
-article.example {
+/* line 37, ../sass/_main-content.scss */
+#main-content article.example {
   background: #39499c;
   color: white;
   -webkit-font-smoothing: antialiased;
 }
-/* line 40, ../sass/_articles.scss */
-article.phases {
+/* line 44, ../sass/_main-content.scss */
+#main-content article.phases {
   background: #39499c;
   color: white;
   -webkit-font-smoothing: antialiased;
 }
-/* line 44, ../sass/_articles.scss */
-article.user .group figure {
+/* line 48, ../sass/_main-content.scss */
+#main-content article.user .group figure {
   max-width: 300px;
   margin-bottom: 1em;
 }
 @media only screen and (min-width: 500px) {
-  /* line 55, ../sass/_articles.scss */
-  article.user .group.of-two {
+  /* line 59, ../sass/_main-content.scss */
+  #main-content article.user .group.of-two {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -231,15 +323,15 @@ article.user .group figure {
     -ms-justify-content: flex-start;
     justify-content: flex-start;
   }
-  /* line 57, ../sass/_articles.scss */
-  article.user .group.of-two > * {
+  /* line 61, ../sass/_main-content.scss */
+  #main-content article.user .group.of-two > * {
     -webkit-flex: 0 1 50%;
     -moz-flex: 0 1 50%;
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
   }
-  /* line 64, ../sass/_articles.scss */
-  article h2, article h3, article p, article.intro li {
+  /* line 68, ../sass/_main-content.scss */
+  #main-content article h2, #main-content article h3, #main-content article p, #main-content article.intro li {
     margin-left: 50px;
   }
 }
@@ -264,41 +356,54 @@ article.user .group figure {
 @media only screen and (min-width: 1300px) {
   /* line 19, ../sass/_page-context.scss */
   #container {
-    padding: 50px 0;
+    padding: 50px 0 60px;
     width: 1200px;
     margin: 0 auto;
   }
 }
 /* line 1, ../sass/_glossary.scss */
 section#glossary {
+  position: fixed;
+  transition: top 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+  top: 110vh;
+  left: 0;
+  right: 0;
+  height: 100%;
+  overflow: auto;
+  z-index: 9;
   background: #39499c;
   color: white;
   -webkit-font-smoothing: antialiased;
 }
-/* line 4, ../sass/_glossary.scss */
+/* line 10, ../sass/_glossary.scss */
+section#glossary.visible {
+  top: 0;
+}
+/* line 14, ../sass/_glossary.scss */
 section#glossary ul {
   list-style: none;
   padding: 0;
+  padding-bottom: 50px;
 }
-/* line 8, ../sass/_glossary.scss */
+/* line 20, ../sass/_glossary.scss */
 section#glossary li {
   border-top: solid 1px;
   margin-bottom: 1em;
   padding-left: 0;
 }
-/* line 12, ../sass/_glossary.scss */
+/* line 24, ../sass/_glossary.scss */
 section#glossary li span {
   display: block;
   margin-bottom: .5em;
 }
 @media only screen and (min-width: 600px) {
-  /* line 20, ../sass/_glossary.scss */
+  /* line 32, ../sass/_glossary.scss */
   section#glossary li span {
     display: inline-block;
     width: 80%;
     vertical-align: top;
   }
-  /* line 24, ../sass/_glossary.scss */
+  /* line 36, ../sass/_glossary.scss */
   section#glossary li span:first-of-type {
     width: 20%;
   }

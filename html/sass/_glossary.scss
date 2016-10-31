@@ -1,9 +1,21 @@
 section#glossary {
-
+	position: fixed;
+	transition: top 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+	top: 110vh;
+	left: 0;
+	right: 0;
+	height: 100%;
+	overflow: auto;
+	z-index: 9;
+	&.visible {
+		top: 0;
+	}
 	@include blue;
 	ul {
 		list-style: none;
 		padding: 0;
+		padding-bottom: 50px;
+
 	}
 	li {
 		border-top: solid 1px; 

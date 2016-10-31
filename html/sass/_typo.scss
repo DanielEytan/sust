@@ -30,6 +30,20 @@ h1, p, ul {
 
 header#header h1 {
 	font-size: 1.5em;
+	////////////////////////////////////////////////////////// < 800px
+	@media only screen and (min-width : 800px) {
+		font-size: 1.8em;
+	}
+	////////////////////////////////////////////////////////// < 1300px
+	@media only screen and (min-width : 1000px) {
+		font-size: 2em;
+		
+	}
+	////////////////////////////////////////////////////////// < 1300px
+	@media only screen and (min-width : 1300px) {
+		font-size: 2.5em;
+		
+	}
 }
 h1 {
 	font-size: 1.5em;

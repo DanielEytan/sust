@@ -1,0 +1,73 @@
+#main-content {
+	&.overflow {
+		overflow: no;
+	}
+	article {
+		&.intro {
+			@include blue;
+		}
+		&.organisation {	
+			color: $blue;
+			.box {
+				&:first-of-type {
+					color: red;
+				}
+				margin-bottom: 1em;
+				header, ul {
+					border: solid 2px;
+				}
+				.group & {
+					.box header, ul {
+						border: solid 1px;
+					}
+				}
+				header {
+					padding: 10px;
+				}
+				ul {
+					border-top: 0;
+					padding: 10px 10px 10px 1.8em;
+					// list-style-type: none !important;
+				}
+				h2 {
+					margin:0 0 1em;
+				}
+			}
+		}
+		&.example {
+			@include blue;
+
+		}
+		&.timeline {
+
+		}
+		&.phases {
+			@include blue;
+		}
+		&.user {
+			.group figure {
+				max-width: 300px;
+				margin-bottom: 1em;
+			}
+		}
+
+
+		////////////////////////////////////////////////////////// < 500px
+		@media only screen and (min-width : 500px) {
+			&.user {
+				.group {
+					&.of-two {
+						@include flex-container();
+						>* {
+							@include flex-item();
+						}
+					}
+
+				}
+			}
+			h2, h3, p, &.intro li {
+				margin-left: 50px;
+			}
+		}
+	}
+}
