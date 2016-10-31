@@ -191,25 +191,29 @@ article.organisation .box ul {
   border-top: 0;
   padding: 10px 10px 10px 1.8em;
 }
-/* line 30, ../sass/_articles.scss */
+/* line 28, ../sass/_articles.scss */
+article.organisation .box h2 {
+  margin: 0 0 1em;
+}
+/* line 33, ../sass/_articles.scss */
 article.example {
   background: #39499c;
   color: white;
   -webkit-font-smoothing: antialiased;
 }
-/* line 37, ../sass/_articles.scss */
+/* line 40, ../sass/_articles.scss */
 article.phases {
   background: #39499c;
   color: white;
   -webkit-font-smoothing: antialiased;
 }
-/* line 41, ../sass/_articles.scss */
+/* line 44, ../sass/_articles.scss */
 article.user .group figure {
   max-width: 300px;
   margin-bottom: 1em;
 }
 @media only screen and (min-width: 500px) {
-  /* line 52, ../sass/_articles.scss */
+  /* line 55, ../sass/_articles.scss */
   article.user .group.of-two {
     display: -webkit-flex;
     display: -moz-flex;
@@ -227,14 +231,14 @@ article.user .group figure {
     -ms-justify-content: flex-start;
     justify-content: flex-start;
   }
-  /* line 54, ../sass/_articles.scss */
+  /* line 57, ../sass/_articles.scss */
   article.user .group.of-two > * {
     -webkit-flex: 0 1 50%;
     -moz-flex: 0 1 50%;
     -ms-flex: 0 1 50%;
     flex: 0 1 50%;
   }
-  /* line 61, ../sass/_articles.scss */
+  /* line 64, ../sass/_articles.scss */
   article h2, article h3, article p, article.intro li {
     margin-left: 50px;
   }
