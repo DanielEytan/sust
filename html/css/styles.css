@@ -202,51 +202,51 @@ header#header nav div {
 }
 /* line 27, ../sass/_header.scss */
 header#header nav ul {
+  transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
   padding: 0 10px;
   height: 0;
   margin-bottom: 0;
 }
-/* line 32, ../sass/_header.scss */
+/* line 34, ../sass/_header.scss */
 header#header nav ul li {
   margin-bottom: 1em;
   border-top: solid 1px #39499c;
 }
-/* line 36, ../sass/_header.scss */
+/* line 38, ../sass/_header.scss */
 header#header nav ul.visible {
   display: block;
 }
-/* line 40, ../sass/_header.scss */
+/* line 42, ../sass/_header.scss */
 header#header nav.active {
   background: white;
 }
-/* line 41, ../sass/_header.scss */
+/* line 43, ../sass/_header.scss */
 header#header nav.active ul {
-  transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
   height: 80vh;
   padding-top: 10px;
 }
-/* line 49, ../sass/_header.scss */
+/* line 50, ../sass/_header.scss */
 header#header nav.active div {
   color: #39499c;
 }
 @media only screen and (min-width: 800px) {
-  /* line 57, ../sass/_header.scss */
+  /* line 58, ../sass/_header.scss */
   header#header #container {
     position: relative;
   }
-  /* line 60, ../sass/_header.scss */
+  /* line 61, ../sass/_header.scss */
   header#header .title {
     position: absolute;
     top: 50px;
     right: 50px;
   }
-  /* line 68, ../sass/_header.scss */
+  /* line 69, ../sass/_header.scss */
   header#header h2 {
     margin-left: 30px;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 77, ../sass/_header.scss */
+  /* line 78, ../sass/_header.scss */
   header#header h2 {
     margin-left: 70px;
   }

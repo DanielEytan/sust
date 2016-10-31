@@ -26,6 +26,8 @@ header#header {
 		}
 		ul {
 			// display: none;
+				transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+			
 			padding: 0 10px;
 			height: 0;
 			margin-bottom: 0;
@@ -39,7 +41,6 @@ header#header {
 		}
 		&.active {
 			ul {
-				transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
 				height: 80vh;
 				padding-top: 10px;
 

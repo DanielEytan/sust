@@ -12,4 +12,8 @@ $(document).ready(function() {
 		$("nav").toggleClass("active");
 
 	});
+	$("nav ul").click(function() {
+		$("nav ul").toggleClass("visible");
+		$("nav").toggleClass("active");
+	});
 });
