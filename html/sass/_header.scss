@@ -14,23 +14,39 @@ header#header {
 		background: white;
 		position: fixed;
 		bottom: 0;
+			// width: 800px;
 		left: 0;
 		right: 0;
-		div {
-			// color: white;
-			color: $blue;
-			padding: .15em .5em .2em;
-			margin: 10px 0px 10px 10px;
-			border: solid 1px;
-			display: inline-block;
+		div.buttons {
+		
+			> div {
+				color: $blue;
+				padding: .15em .5em .2em;
+				margin: 10px 0px 10px 10px;
+				border: solid 1px;
+				display: inline-block;
+			}
 		}
-		ul {
+		.content-list {
+			z-index: 9;
 			// display: none;
-				transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
-			
+			background: white;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 2.5em;
+			transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
 			padding: 0 10px;
 			height: 0;
+			overflow: hidden;
 			margin-bottom: 0;
+	// 		height: 100%;
+	// overflow: auto;
+			ul {
+				list-style: none;
+				margin-top: 1em;
+			}
 			li {
 				margin-bottom: 1em;
 				border-top: solid 1px $blue;
@@ -40,6 +56,10 @@ header#header {
 			}
 		}
 		&.active {
+			.content-list {
+				transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+				height: auto;
+			}
 			ul {
 				height: 80vh;
 				padding-top: 10px;
@@ -55,9 +75,9 @@ header#header {
 
 	////////////////////////////////////////////////////////// < 800px
 	@media only screen and (min-width : 800px) {
-		#container {
-			position: relative;
-		}
+		// #container {
+		// 	position: relative;
+		// }
 		.title {
 			position: absolute;
 			top: 50px;

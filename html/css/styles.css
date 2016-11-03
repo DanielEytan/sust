@@ -92,61 +92,68 @@ h1, p, ul {
   margin-bottom: 1em;
 }
 
-/* line 31, ../sass/_typo.scss */
+/* line 30, ../sass/_typo.scss */
+nav li {
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+/* line 34, ../sass/_typo.scss */
 header#header h1 {
   font-size: 1.5em;
+  line-height: 1.2em;
 }
 @media only screen and (min-width: 800px) {
-  /* line 31, ../sass/_typo.scss */
+  /* line 34, ../sass/_typo.scss */
   header#header h1 {
     font-size: 1.8em;
   }
 }
 @media only screen and (min-width: 1000px) {
-  /* line 31, ../sass/_typo.scss */
+  /* line 34, ../sass/_typo.scss */
   header#header h1 {
     font-size: 2em;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 31, ../sass/_typo.scss */
+  /* line 34, ../sass/_typo.scss */
   header#header h1 {
     font-size: 2.5em;
   }
 }
 
-/* line 48, ../sass/_typo.scss */
+/* line 52, ../sass/_typo.scss */
 h1 {
   font-size: 1.5em;
   line-height: 1.2em;
   margin-bottom: 2em;
 }
 @media only screen and (min-width: 600px) {
-  /* line 48, ../sass/_typo.scss */
+  /* line 52, ../sass/_typo.scss */
   h1 {
     font-size: 1.75em;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 48, ../sass/_typo.scss */
+  /* line 52, ../sass/_typo.scss */
   h1 {
     font-size: 2em;
   }
 }
 
-/* line 62, ../sass/_typo.scss */
+/* line 66, ../sass/_typo.scss */
 h2 {
   font-size: 1.2em;
   line-height: 1.2em;
   margin: 2em 0 1em;
 }
 
-/* line 67, ../sass/_typo.scss */
+/* line 71, ../sass/_typo.scss */
 h3 {
   color: #e45d50;
 }
 
-/* line 70, ../sass/_typo.scss */
+/* line 74, ../sass/_typo.scss */
 p {
   max-width: 600px;
 }
@@ -192,61 +199,75 @@ header#header nav {
   left: 0;
   right: 0;
 }
-/* line 19, ../sass/_header.scss */
-header#header nav div {
+/* line 22, ../sass/_header.scss */
+header#header nav div.buttons > div {
   color: #39499c;
   padding: .15em .5em .2em;
   margin: 10px 0px 10px 10px;
   border: solid 1px;
   display: inline-block;
 }
-/* line 27, ../sass/_header.scss */
-header#header nav ul {
+/* line 30, ../sass/_header.scss */
+header#header nav .content-list {
+  z-index: 9;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 2.5em;
   transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
   padding: 0 10px;
   height: 0;
+  overflow: hidden;
   margin-bottom: 0;
 }
-/* line 34, ../sass/_header.scss */
-header#header nav ul li {
+/* line 46, ../sass/_header.scss */
+header#header nav .content-list ul {
+  list-style: none;
+  margin-top: 1em;
+}
+/* line 50, ../sass/_header.scss */
+header#header nav .content-list li {
   margin-bottom: 1em;
   border-top: solid 1px #39499c;
 }
-/* line 38, ../sass/_header.scss */
-header#header nav ul.visible {
+/* line 54, ../sass/_header.scss */
+header#header nav .content-list.visible {
   display: block;
 }
-/* line 42, ../sass/_header.scss */
+/* line 58, ../sass/_header.scss */
 header#header nav.active {
   background: white;
 }
-/* line 43, ../sass/_header.scss */
+/* line 59, ../sass/_header.scss */
+header#header nav.active .content-list {
+  transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+  height: auto;
+}
+/* line 63, ../sass/_header.scss */
 header#header nav.active ul {
   height: 80vh;
   padding-top: 10px;
 }
-/* line 50, ../sass/_header.scss */
+/* line 70, ../sass/_header.scss */
 header#header nav.active div {
   color: #39499c;
 }
 @media only screen and (min-width: 800px) {
-  /* line 58, ../sass/_header.scss */
-  header#header #container {
-    position: relative;
-  }
-  /* line 61, ../sass/_header.scss */
+  /* line 81, ../sass/_header.scss */
   header#header .title {
     position: absolute;
     top: 50px;
     right: 50px;
   }
-  /* line 69, ../sass/_header.scss */
+  /* line 89, ../sass/_header.scss */
   header#header h2 {
     margin-left: 30px;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 78, ../sass/_header.scss */
+  /* line 98, ../sass/_header.scss */
   header#header h2 {
     margin-left: 70px;
   }
@@ -450,7 +471,7 @@ header#header nav.active div {
   #main-content article.organisation .box.circle > * {
     background: white;
     position: relative;
-    z-index: 99;
+    z-index: 9;
     padding: 50px;
   }
   /* line 175, ../sass/_main-content.scss */
@@ -566,4 +587,10 @@ section#glossary li span {
   section#glossary li span:first-of-type {
     width: 20%;
   }
+}
+
+/* line 18, ../sass/styles.scss */
+body.overflow, html.overflow {
+  height: 100%;
+  overflow: hidden;
 }
