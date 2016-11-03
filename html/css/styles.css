@@ -196,6 +196,11 @@ header#header h1 {
   margin: 1em 0 1em;
 }
 /* line 12, ../sass/_header.scss */
+header#header .logo {
+  max-width: 300px;
+  margin-top: 30px;
+}
+/* line 16, ../sass/_header.scss */
 header#header nav {
   z-index: 99;
   background: white;
@@ -204,7 +209,7 @@ header#header nav {
   left: 0;
   right: 0;
 }
-/* line 22, ../sass/_header.scss */
+/* line 26, ../sass/_header.scss */
 header#header nav div.buttons > div {
   color: #39499c;
   padding: .15em .5em .2em;
@@ -212,7 +217,7 @@ header#header nav div.buttons > div {
   border: solid 1px;
   display: inline-block;
 }
-/* line 30, ../sass/_header.scss */
+/* line 34, ../sass/_header.scss */
 header#header nav .content-list {
   z-index: 9;
   background: white;
@@ -227,52 +232,52 @@ header#header nav .content-list {
   overflow: hidden;
   margin-bottom: 0;
 }
-/* line 46, ../sass/_header.scss */
+/* line 50, ../sass/_header.scss */
 header#header nav .content-list ul {
   list-style: none;
   margin-top: 1em;
 }
-/* line 50, ../sass/_header.scss */
+/* line 54, ../sass/_header.scss */
 header#header nav .content-list li {
   margin-bottom: 1em;
   border-top: solid 1px #39499c;
 }
-/* line 54, ../sass/_header.scss */
+/* line 58, ../sass/_header.scss */
 header#header nav .content-list.visible {
   display: block;
 }
-/* line 58, ../sass/_header.scss */
+/* line 62, ../sass/_header.scss */
 header#header nav.active {
   background: white;
 }
-/* line 59, ../sass/_header.scss */
+/* line 63, ../sass/_header.scss */
 header#header nav.active .content-list {
   transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
   height: auto;
 }
-/* line 63, ../sass/_header.scss */
+/* line 67, ../sass/_header.scss */
 header#header nav.active ul {
   height: 80vh;
   padding-top: 10px;
 }
-/* line 70, ../sass/_header.scss */
+/* line 74, ../sass/_header.scss */
 header#header nav.active div {
   color: #39499c;
 }
 @media only screen and (min-width: 800px) {
-  /* line 81, ../sass/_header.scss */
+  /* line 85, ../sass/_header.scss */
   header#header .title {
     position: absolute;
     top: 50px;
     right: 50px;
   }
-  /* line 89, ../sass/_header.scss */
+  /* line 93, ../sass/_header.scss */
   header#header h2 {
     margin-left: 30px;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 98, ../sass/_header.scss */
+  /* line 102, ../sass/_header.scss */
   header#header h2 {
     margin-left: 70px;
   }
@@ -384,13 +389,14 @@ header#header nav.active div {
 #main-content article.user .statement, #main-content article.provider .statement {
   color: #e45d50;
   margin-left: 20px;
+  margin: 2em 0 2em 20px;
 }
-/* line 99, ../sass/_main-content.scss */
+/* line 100, ../sass/_main-content.scss */
 #main-content article.user .statement strong, #main-content article.provider .statement strong {
   display: block;
 }
 @media only screen and (min-width: 500px) {
-  /* line 109, ../sass/_main-content.scss */
+  /* line 110, ../sass/_main-content.scss */
   #main-content article.organisation .group {
     display: -webkit-flex;
     display: -moz-flex;
@@ -409,57 +415,57 @@ header#header nav.active div {
     justify-content: space-between;
     width: 100%;
   }
-  /* line 113, ../sass/_main-content.scss */
+  /* line 114, ../sass/_main-content.scss */
   #main-content article.organisation .group .box {
     -webkit-flex: 0 1 30%;
     -moz-flex: 0 1 30%;
     -ms-flex: 0 1 30%;
     flex: 0 1 30%;
   }
-  /* line 117, ../sass/_main-content.scss */
+  /* line 118, ../sass/_main-content.scss */
   #main-content article.organisation .group.of-two .box {
     -webkit-flex: 0 1 47%;
     -moz-flex: 0 1 47%;
     -ms-flex: 0 1 47%;
     flex: 0 1 47%;
   }
-  /* line 138, ../sass/_main-content.scss */
+  /* line 139, ../sass/_main-content.scss */
   #main-content article.timeline table {
     margin-top: 5em;
   }
-  /* line 140, ../sass/_main-content.scss */
+  /* line 141, ../sass/_main-content.scss */
   #main-content article.timeline table th {
     visibility: visible;
   }
-  /* line 143, ../sass/_main-content.scss */
+  /* line 144, ../sass/_main-content.scss */
   #main-content article.timeline table td, #main-content article.timeline table th {
     display: table-cell;
     vertical-align: top;
   }
-  /* line 146, ../sass/_main-content.scss */
+  /* line 147, ../sass/_main-content.scss */
   #main-content article.timeline table td:first-child, #main-content article.timeline table th:first-child {
     padding-top: 0;
     width: 100px;
   }
-  /* line 151, ../sass/_main-content.scss */
+  /* line 152, ../sass/_main-content.scss */
   #main-content article.timeline table th span {
     display: inline-block;
     transform: rotate(-90deg);
     transform-origin: left top 0;
   }
-  /* line 160, ../sass/_main-content.scss */
+  /* line 161, ../sass/_main-content.scss */
   #main-content article.phases figure {
     max-width: 800px;
   }
-  /* line 162, ../sass/_main-content.scss */
+  /* line 163, ../sass/_main-content.scss */
   #main-content article.phases figure.mobile {
     display: none;
   }
-  /* line 165, ../sass/_main-content.scss */
+  /* line 166, ../sass/_main-content.scss */
   #main-content article.phases figure.desktop {
     display: block;
   }
-  /* line 172, ../sass/_main-content.scss */
+  /* line 173, ../sass/_main-content.scss */
   #main-content article.user .group.of-two {
     display: -webkit-flex;
     display: -moz-flex;
@@ -477,60 +483,60 @@ header#header nav.active div {
     -ms-justify-content: flex-start;
     justify-content: flex-start;
   }
-  /* line 174, ../sass/_main-content.scss */
+  /* line 175, ../sass/_main-content.scss */
   #main-content article.user .group.of-two > * {
     -webkit-flex: 0 1 70%;
     -moz-flex: 0 1 70%;
     -ms-flex: 0 1 70%;
     flex: 0 1 70%;
   }
-  /* line 176, ../sass/_main-content.scss */
+  /* line 177, ../sass/_main-content.scss */
   #main-content article.user .group.of-two > *:first-child {
     -webkit-flex: 0 1 30%;
     -moz-flex: 0 1 30%;
     -ms-flex: 0 1 30%;
     flex: 0 1 30%;
   }
-  /* line 186, ../sass/_main-content.scss */
+  /* line 187, ../sass/_main-content.scss */
   #main-content article.user .statement, #main-content article.provider .statement {
     width: 400px;
     margin-left: 50px;
   }
-  /* line 191, ../sass/_main-content.scss */
+  /* line 192, ../sass/_main-content.scss */
   #main-content article h2, #main-content article h3, #main-content article p, #main-content article.intro li {
     margin-left: 50px;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 199, ../sass/_main-content.scss */
+  /* line 200, ../sass/_main-content.scss */
   #main-content article.organisation .box.red {
     width: 300px;
     margin: 0 auto;
   }
-  /* line 203, ../sass/_main-content.scss */
+  /* line 204, ../sass/_main-content.scss */
   #main-content article.organisation .box.circle {
     background: white;
     color: #39499c;
     margin: -50px auto -20px;
     width: 400px;
   }
-  /* line 208, ../sass/_main-content.scss */
+  /* line 209, ../sass/_main-content.scss */
   #main-content article.organisation .box.circle > * {
     background: white;
     position: relative;
     z-index: 9;
     padding: 50px;
   }
-  /* line 213, ../sass/_main-content.scss */
+  /* line 214, ../sass/_main-content.scss */
   #main-content article.organisation .box.circle > * h2, #main-content article.organisation .box.circle > * li {
     width: 300px;
     margin: 0 auto;
   }
-  /* line 217, ../sass/_main-content.scss */
+  /* line 218, ../sass/_main-content.scss */
   #main-content article.organisation .box.circle > * h2 {
     padding-top: 100px;
   }
-  /* line 221, ../sass/_main-content.scss */
+  /* line 222, ../sass/_main-content.scss */
   #main-content article.organisation .box.circle header {
     padding: 0;
     height: 200px;
@@ -538,7 +544,7 @@ header#header nav.active div {
     border-radius: 600px 600px 0 0;
     text-align: center;
   }
-  /* line 230, ../sass/_main-content.scss */
+  /* line 231, ../sass/_main-content.scss */
   #main-content article.organisation .box.circle ul {
     padding: 0;
     padding-top: 10px;
@@ -546,14 +552,14 @@ header#header nav.active div {
     width: 400px;
     border-radius: 0 0 300px 300px;
   }
-  /* line 240, ../sass/_main-content.scss */
+  /* line 241, ../sass/_main-content.scss */
   #main-content article.organisation .group.of-two .box {
     -webkit-flex: 0 1 300px;
     -moz-flex: 0 1 300px;
     -ms-flex: 0 1 300px;
     flex: 0 1 300px;
   }
-  /* line 247, ../sass/_main-content.scss */
+  /* line 248, ../sass/_main-content.scss */
   #main-content article.user .statement, #main-content article.provider .statement {
     margin-left: 100px;
   }

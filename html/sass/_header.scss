@@ -9,6 +9,10 @@ header#header {
 	h1 {
 		margin: 1em 0 1em;
 	}
+	.logo {
+		max-width: 300px;
+		margin-top: 30px;
+	}
 	nav {
 		z-index: 99;
 		background: white;
