@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	$("#toggle").click(function() {
 		$("nav").toggleClass("visible");
 	});
@@ -15,5 +16,7 @@ $(document).ready(function() {
 	$("nav ul").click(function() {
 		$("nav ul").toggleClass("visible");
 		$("nav").toggleClass("active");
+		$("#glossary").removeClass("visible");
+
 	});
 });

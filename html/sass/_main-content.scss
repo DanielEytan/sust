@@ -29,6 +29,11 @@
 				h2 {
 					margin:0 0 1em;
 				}
+				&.circle {
+					@include blue;
+					width: 75%;
+					margin: 0 auto;
+				}
 			}
 			.group {
 				.box {
@@ -45,10 +50,30 @@
 		}
 		&.example {
 			@include blue;
-
 		}
 		&.timeline {
 
+			table {
+				tr:not(:first-child) {
+					border-top: solid 1px;
+				}
+				th {
+					visibility: hidden;
+				}
+				
+				td,th {
+
+					display: block;
+					&:first-child {
+						padding: .2em 0 .5em;
+						width: 200px;
+					}
+					&:last-child {
+						padding-bottom: 1em;
+					}
+				}
+			}
+			
 		}
 		&.phases {
 			@include blue;
@@ -78,6 +103,42 @@
 					}
 				}
 			}
+			&.timeline {
+				// ul {
+				// 	li {
+				// 		@include flex-container(auto);
+				// 		span {
+				// 			@include flex-item(80%);
+				// 			&:first-of-type {
+				// 			@include flex-item(20%);
+								
+							
+
+				// 			}
+				// 		}
+				// 	}
+				// }
+				table {
+					margin-top: 5em;
+					th {
+						visibility: visible;
+					}
+					td,th {
+						display: table-cell;
+						vertical-align: top;
+						&:first-child {
+							padding-top: 0;
+							width: 100px;
+						}
+					}
+					th span {
+						display: inline-block;
+						transform: rotate(-90deg);
+						transform-origin: left top 0;
+						// margin: 0 50px;
+					}
+				}
+			}
 			&.user {
 				.group {
 					&.of-two {
@@ -91,6 +152,58 @@
 			}
 			h2, h3, p, &.intro li {
 				margin-left: 50px;
+			}
+		}
+		////////////////////////////////////////////////////////// < 800px
+		@media only screen and (min-width : 800px) {
+			&.organisation {
+				.box {
+					&.red {
+						width: 300px;
+						margin: 0 auto;
+					}
+					&.circle {
+						background: white;
+						color: $blue;
+						margin: -50px auto -20px;
+						width: 400px;
+						>* {
+							background: white;
+							position: relative;
+							z-index: 99;
+							padding: 50px;
+							h2, li {
+								width: 300px;
+								margin: 0 auto;
+							}
+							h2 {
+								padding-top: 100px;
+							}
+						}
+						header {
+							padding: 0;
+							height:200px;
+					     	width:400px;
+					     	border-radius: 600px 600px 0 0;
+					     	text-align: center;
+					     	// -moz-border-radius: 90px 90px 0 0;
+     						// -webkit-border-radius: 90px 90px 0 0;
+					     }
+					     ul {
+					     	padding: 0;
+					     	padding-top: 10px;
+					     	height:200px;
+					     	width:400px;
+					     	border-radius: 0 0 300px 300px ;
+					     }
+					}
+				}
+				.group {
+					&.of-two .box{
+							@include flex-item(300px);
+
+					}
+				}
 			}
 		}
 		////////////////////////////////////////////////////////// < 1300px
