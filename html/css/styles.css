@@ -652,3 +652,8 @@ body.overflow, html.overflow {
   height: 100%;
   overflow: hidden;
 }
+
+/* line 23, ../sass/styles.scss */
+footer {
+  margin-bottom: 2em;
+}
