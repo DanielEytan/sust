@@ -79,6 +79,11 @@ header#header {
 	}
 	@media only screen and (max-width: 350px) {
 		height: 500px;
+		background: url(/image/header-mobile.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+ 	-o-background-size: cover;
+  	background-size: cover;
 
 	}
 	////////////////////////////////////////////////////////// < 800px

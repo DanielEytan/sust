@@ -269,22 +269,27 @@ header#header nav.active div {
   /* line 1, ../sass/_header.scss */
   header#header {
     height: 500px;
+    background: url(/image/header-mobile.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 89, ../sass/_header.scss */
+  /* line 94, ../sass/_header.scss */
   header#header .title {
     position: absolute;
     top: 50px;
     right: 50px;
   }
-  /* line 97, ../sass/_header.scss */
+  /* line 102, ../sass/_header.scss */
   header#header h2 {
     margin-left: 30px;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 106, ../sass/_header.scss */
+  /* line 111, ../sass/_header.scss */
   header#header h2 {
     margin-left: 70px;
   }
