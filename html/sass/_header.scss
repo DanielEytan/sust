@@ -24,6 +24,7 @@ header#header {
 		div.buttons {
 		
 			> div {
+				cursor: pointer;
 				color: $blue;
 				padding: .15em .5em .2em;
 				margin: 10px 0px 10px 10px;
