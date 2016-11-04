@@ -265,20 +265,26 @@ header#header nav.active ul {
 header#header nav.active div {
   color: #003da5;
 }
+@media only screen and (max-width: 350px) {
+  /* line 1, ../sass/_header.scss */
+  header#header {
+    height: 500px;
+  }
+}
 @media only screen and (min-width: 800px) {
-  /* line 86, ../sass/_header.scss */
+  /* line 89, ../sass/_header.scss */
   header#header .title {
     position: absolute;
     top: 50px;
     right: 50px;
   }
-  /* line 94, ../sass/_header.scss */
+  /* line 97, ../sass/_header.scss */
   header#header h2 {
     margin-left: 30px;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 103, ../sass/_header.scss */
+  /* line 106, ../sass/_header.scss */
   header#header h2 {
     margin-left: 70px;
   }
