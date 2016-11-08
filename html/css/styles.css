@@ -209,7 +209,7 @@ header#header nav {
   left: 0;
   right: 0;
 }
-/* line 26, ../sass/_header.scss */
+/* line 25, ../sass/_header.scss */
 header#header nav div.buttons > div {
   cursor: pointer;
   color: #003da5;
@@ -218,7 +218,7 @@ header#header nav div.buttons > div {
   border: solid 1px;
   display: inline-block;
 }
-/* line 35, ../sass/_header.scss */
+/* line 34, ../sass/_header.scss */
 header#header nav .content-list {
   z-index: 9;
   background: white;
@@ -233,35 +233,35 @@ header#header nav .content-list {
   overflow: hidden;
   margin-bottom: 0;
 }
-/* line 51, ../sass/_header.scss */
+/* line 50, ../sass/_header.scss */
 header#header nav .content-list ul {
   list-style: none;
   margin-top: 1em;
 }
-/* line 55, ../sass/_header.scss */
+/* line 54, ../sass/_header.scss */
 header#header nav .content-list li {
   margin-bottom: 1em;
   border-top: solid 1px #003da5;
 }
-/* line 59, ../sass/_header.scss */
+/* line 58, ../sass/_header.scss */
 header#header nav .content-list.visible {
   display: block;
 }
-/* line 63, ../sass/_header.scss */
+/* line 62, ../sass/_header.scss */
 header#header nav.active {
   background: white;
 }
-/* line 64, ../sass/_header.scss */
+/* line 63, ../sass/_header.scss */
 header#header nav.active .content-list {
   transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
   height: auto;
 }
-/* line 68, ../sass/_header.scss */
+/* line 67, ../sass/_header.scss */
 header#header nav.active ul {
   height: 80vh;
   padding-top: 10px;
 }
-/* line 75, ../sass/_header.scss */
+/* line 74, ../sass/_header.scss */
 header#header nav.active div {
   color: #003da5;
 }
@@ -277,19 +277,19 @@ header#header nav.active div {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 94, ../sass/_header.scss */
+  /* line 93, ../sass/_header.scss */
   header#header .title {
     position: absolute;
     top: 50px;
     right: 50px;
   }
-  /* line 102, ../sass/_header.scss */
+  /* line 100, ../sass/_header.scss */
   header#header h2 {
     margin-left: 30px;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 111, ../sass/_header.scss */
+  /* line 109, ../sass/_header.scss */
   header#header h2 {
     margin-left: 70px;
   }
