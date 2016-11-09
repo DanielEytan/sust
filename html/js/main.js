@@ -22,6 +22,5 @@ $(document).ready(function() {
 		$("nav").toggleClass("active");
 		$("#glossary").removeClass("visible");
 		$("body").removeClass("overflow");
-
 	});
 });
