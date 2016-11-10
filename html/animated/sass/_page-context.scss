@@ -1,0 +1,33 @@
+#container {
+	padding: 15px 10px;
+	position: relative;
+}
+
+////////////////////////////////////////////////////////// < 500px
+@media only screen and (min-width : 500px) {
+	#container {
+		padding: 30px;
+	}
+}
+////////////////////////////////////////////////////////// < 800px
+@media only screen and (min-width : 800px) {
+	#container {
+		padding: 50px;
+	}
+}
+////////////////////////////////////////////////////////// < 800px
+@media only screen and (min-width : 900px) {
+	#container {
+		padding: 50px 0 60px;
+		width: 800px;
+		margin: 0 auto;
+	}
+}
+////////////////////////////////////////////////////////// < 1300px
+@media only screen and (min-width : 1300px) {
+	#container {
+		padding: 50px 0 60px;
+		width: 1200px;
+		margin: 0 auto;
+	}
+}

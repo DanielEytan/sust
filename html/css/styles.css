@@ -78,7 +78,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   font-family: Plain-Medium, helvetica neue, helvetica, sans-serif;
   font-size: .9em;
-  line-height: 1.3em;
+  line-height: 1.4em;
   color: #003da5;
 }
 @media only screen and (min-width: 800px) {

@@ -1,0 +1,162 @@
+#header {
+	position: relative;
+	background: url('/image/header.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+ 	-o-background-size: cover;
+  	background-size: cover;
+	height: 100vh;
+	color: white;
+	h1 {
+		margin: 1em 0 1em;
+	}
+	.logo {
+		max-width: 300px;
+		margin-top: 30px;
+	}
+	nav {
+		z-index: 99;
+		background: white;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		div.buttons {
+
+			> div {
+				cursor: pointer;
+				color: $blue;
+				padding: .15em .5em .2em;
+				margin: 10px 0px 10px 10px;
+				border: solid 1px;
+				display: inline-block;
+			}
+		}
+		.content-list {
+			z-index: 9;
+			// display: none;
+			background: white;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 2.5em;
+			transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+			padding: 0 10px;
+			height: 0;
+			overflow: hidden;
+			margin-bottom: 0;
+	// 		height: 100%;
+	// overflow: auto;
+			ul {
+				list-style: none;
+				margin-top: 1em;
+			}
+			li {
+				margin-bottom: 1em;
+				border-top: solid 1px $blue;
+			}
+			&.visible {
+				display: block;
+			}
+		}
+		&.active {
+			.content-list {
+				transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+				height: auto;
+			}
+			ul {
+				height: 80vh;
+				padding-top: 10px;
+
+			}
+
+			background: white;
+			div {
+				color: $blue;
+			}
+		}
+	}
+	@media only screen and (max-width: 350px) {
+		height: 500px;
+		background: url(/image/header-mobile.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+ 	-o-background-size: cover;
+  	background-size: cover;
+
+	}
+	////////////////////////////////////////////////////////// < 800px
+	@media only screen and (min-width : 800px) {
+		// #container {
+		// 	position: relative;
+		// }
+		.title {
+			position: absolute;
+			top: 50px;
+			right: 50px;
+		}
+		h1 {
+		}
+		h2 {
+			margin-left: 30px;
+		}
+	}
+	////////////////////////////////////////////////////////// < 800px
+	@media only screen and (min-width : 1300px) {
+		h1 {
+			// margin-left: 650px;
+		}
+		h2 {
+			margin-left: 70px;
+		}
+	}
+}
+.white {
+	position: relative;
+	z-index: 10;
+}
+.cloundContainer {
+
+  z-index: 1;
+  opacity: .95;
+  position: absolute;
+  top: 100vh; right: 0; left: 0;
+  height: 100vh;
+  pointer-events: none;
+  perspective: 1200px;
+  overflow: hidden;
+}
+.mother {
+  position: absolute;
+  width: 80%; height: 80%;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  transform-style: preserve-3d;
+}
+
+.cloud, .cloudPart {
+  position: absolute;
+  width: 256px; height: 256px;
+  margin: -128px 0 0 -128px;
+  top: 0; left: 0;
+}
+
+.cloud {
+  transform-style: preserve-3d;
+  //animation: cloudRotation 400s infinite linear;
+}
+
+.cloudPart {
+  background: url('/image/cloud.png') no-repeat;
+  background-size: 100% auto;
+}
+
+@-webkit-keyframes cloudRotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

@@ -1,0 +1,275 @@
+#main-content {
+	&.overflow {
+		overflow: no;
+	}
+	article {
+		&.intro {
+			@include blue;
+		}
+		&.organisation {	
+			color: $blue;
+			.box {
+				&.red {
+					color: red;
+				}
+				margin-bottom: 1em;
+				header, ul {
+					border: solid 2px;
+				}
+
+				
+				header {
+					padding: 10px;
+				}
+				ul {
+					border-top: 0;
+					padding: 10px 10px 10px 1.8em;
+					// list-style-type: none !important;
+				}
+				h2 {
+					margin:0 0 1em;
+				}
+				&.circle {
+					@include blue;
+					width: 75%;
+					margin: 0 auto;
+				}
+			}
+			.group {
+				.box {
+						header, ul {
+							border: solid 2px $bluelight;
+						}
+						ul {
+							border-top: 0;
+						}
+					}
+			}
+			
+
+		}
+		&.example {
+			@include blue;
+		}
+		&.timeline {
+
+			table {
+				tr:not(:first-child) {
+					border-top: solid 1px;
+				}
+				th {
+					visibility: hidden;
+				}
+				
+				td,th {
+
+					display: block;
+					&:first-child {
+						padding: .2em 0 .5em;
+						width: 200px;
+					}
+					&:last-child {
+						padding-bottom: 1em;
+					}
+				}
+			}
+			
+		}
+		&.phases {
+			@include blue;
+			figure{
+				margin: 50px auto;
+				max-width: 300px;
+				&.desktop {
+					display: none;
+				}
+			}
+		}
+		&.user {
+			.group figure {
+				max-width: 300px;
+				margin-bottom: 1em;
+			}
+
+		}
+		&.user, &.provider {
+			.statement {
+				color: $red;
+				margin-left: 20px;
+				margin: 2em 0 2.5em 20px;
+				strong {
+					display: block;
+				}
+			}
+		}
+
+
+		////////////////////////////////////////////////////////// < 500px
+		@media only screen and (min-width : 500px) {
+			&.organisation {
+				.group {
+
+					@include flex-container(space-between);
+					width: 100%;
+					.box {
+						@include flex-item(30%);
+					}
+					
+					&.of-two .box {
+						@include flex-item(47%);
+						
+					}
+				}
+			}
+			&.timeline {
+				// ul {
+				// 	li {
+				// 		@include flex-container(auto);
+				// 		span {
+				// 			@include flex-item(80%);
+				// 			&:first-of-type {
+				// 			@include flex-item(20%);
+								
+							
+
+				// 			}
+				// 		}
+				// 	}
+				// }
+				table {
+					margin-top: 5em;
+					th {
+						visibility: visible;
+					}
+					td,th {
+						display: table-cell;
+						vertical-align: top;
+						&:first-child {
+							padding-top: 0;
+							width: 100px;
+						}
+					}
+					th span {
+						display: inline-block;
+						transform: rotate(-90deg);
+						transform-origin: left top 0;
+						// margin: 0 50px;
+					}
+				}
+			}
+			&.phases {
+				figure {
+					max-width: 800px;
+					&.mobile {
+						display: none;
+					}
+					&.desktop {
+						display: block;
+					}
+				}
+			}
+			&.user {
+				.group {
+					&.of-two {
+						@include flex-container();
+						>* {
+							@include flex-item(70%);
+							&:first-child {
+								@include flex-item(30%);
+
+							}
+						}
+					}
+
+				}
+			}
+			&.user, &.provider {
+				.statement {
+					width: 400px;
+					margin-left: 50px;
+				}
+			}
+			h2, h3, p, &.intro li {
+				margin-left: 50px;
+			}
+		}
+		////////////////////////////////////////////////////////// < 800px
+		@media only screen and (min-width : 800px) {
+			&.organisation {
+				.box {
+					&.red {
+						width: 300px;
+						margin: 0 auto;
+					}
+					&.circle {
+						background: white;
+						color: $blue;
+						margin: -50px auto -20px;
+						width: 400px;
+						>* {
+							background: white;
+							position: relative;
+							z-index: 9;
+							padding: 50px;
+							h2, li {
+								width: 300px;
+								margin: 0 auto;
+							}
+							h2 {
+								padding-top: 100px;
+							}
+						}
+						header {
+							padding: 0;
+							height:200px;
+					     	width:400px;
+					     	border-radius: 600px 600px 0 0;
+					     	text-align: center;
+					     	// -moz-border-radius: 90px 90px 0 0;
+     						// -webkit-border-radius: 90px 90px 0 0;
+					     }
+					     ul {
+					     	padding: 0;
+					     	padding-top: 10px;
+					     	height:200px;
+					     	width:400px;
+					     	border-radius: 0 0 300px 300px ;
+					     }
+					}
+				}
+				.group {
+					&.of-two .box{
+							@include flex-item(300px);
+
+					}
+				}
+			}
+			&.user, &.provider {
+				.statement {
+					margin-left: 100px;
+				}
+			}
+		}
+		////////////////////////////////////////////////////////// < 1300px
+		@media only screen and (min-width : 1300px) {
+			// &.organisation {
+			// 	.center {
+			// 		border: solid 2px;
+			// 		border-radius: 50%;
+			// 		height: 400px;
+			// 		width: 400px;
+			// 		header {
+			// 			width: 50%;
+			// 			margin: 10% auto;
+			// 		}
+			// 		ul {
+			// 			border: none;
+			// 			width: 80%;
+			// 			margin: 0 auto;
+			// 		}
+			// 	}
+
+			// }
+		}
+	}
+}
