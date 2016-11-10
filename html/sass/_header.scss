@@ -1,5 +1,5 @@
 header#header {
-	background: url(/image/header.jpg) no-repeat center center;
+	background: url(/image/header-noclouds.jpg) no-repeat center center;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
  	-o-background-size: cover;
@@ -13,7 +13,8 @@ header#header {
 		max-width: 300px;
 		margin-top: 30px;
 	}
-	nav {
+	nav#main-nav {
+		border-top: solid 1px $blue;
 		z-index: 99;
 		background: white;
 		position: fixed;
@@ -21,13 +22,12 @@ header#header {
 		left: 0;
 		right: 0;
 		div.buttons {
-		
 			> div {
 				cursor: pointer;
 				color: $blue;
-				padding: .15em .5em .2em;
-				margin: 10px 0px 10px 10px;
-				border: solid 1px;
+				// padding: .15em .5em .2em;
+				margin: 10px 30px 15px 0;
+				// border: solid 1px;
 				display: inline-block;
 			}
 		}
@@ -35,18 +35,22 @@ header#header {
 			z-index: 9;
 			// display: none;
 			background: white;
-			position: fixed;
-			top: 0;
+			// position: fixed;
+			transition: top 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+			height: 0;
+			top: 110vh;
 			left: 0;
 			right: 0;
-			bottom: 2.5em;
+			// bottom: 2.5em;
 			transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
 			padding: 0 10px;
-			height: 0;
+			// height: 0;
 			overflow: hidden;
 			margin-bottom: 0;
-	// 		height: 100%;
-	// overflow: auto;
+	// top: 110vh;
+
+			// height: 100%;
+			// overflow: auto;
 			ul {
 				list-style: none;
 				margin-top: 1em;
@@ -60,17 +64,26 @@ header#header {
 			}
 		}
 		&.active {
+			background: white;
+			transition: top 1s cubic-bezier(0.94, 0.4, 0.25, 1);				
+			top: 0;
+			height: 100vh;
+
 			.content-list {
-				transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
 				height: auto;
+				top: 0;
+			// transition: top 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+
+			// top: 0;
+
+				// transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+				// height: 100vh;
 			}
 			ul {
+				display: block;
 				height: 80vh;
 				padding-top: 10px;
-
 			}
-			
-			background: white;
 			div {
 				color: $blue;
 			}

@@ -1,3 +1,4 @@
+
 #container {
 	padding: 15px 10px;
 }
@@ -16,17 +17,20 @@
 }
 ////////////////////////////////////////////////////////// < 800px
 @media only screen and (min-width : 900px) {
-	#container {
-		padding: 50px 0 60px;
+	#container, .buttons, .content-list ul {
 		width: 800px;
 		margin: 0 auto;
+	}
+	#container, .content-list ul {
+		padding: 50px 0 60px;
+
 	}
 }
 ////////////////////////////////////////////////////////// < 1300px
 @media only screen and (min-width : 1300px) {
-	#container {
-		padding: 50px 0 60px;
+	#container, .buttons, .content-list ul {
 		width: 1000px;
 		margin: 0 auto;
 	}
+
 }

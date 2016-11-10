@@ -100,77 +100,75 @@ i {
 }
 
 /* line 34, ../sass/_typo.scss */
-h1, p, ul {
-  margin-bottom: 1em;
+h1 {
+  margin-bottom: 2em;
 }
 
 /* line 37, ../sass/_typo.scss */
-nav li {
-  font-size: 1.5em;
-  line-height: 1.2em;
+p, ul {
+  margin-bottom: 1em;
 }
 
-/* line 41, ../sass/_typo.scss */
+/* line 44, ../sass/_typo.scss */
 header#header h1, .statement strong {
   font-size: 1.5em;
   line-height: 1.01em;
 }
 @media only screen and (min-width: 800px) {
-  /* line 41, ../sass/_typo.scss */
+  /* line 44, ../sass/_typo.scss */
   header#header h1, .statement strong {
     font-size: 1.8em;
   }
 }
 @media only screen and (min-width: 1000px) {
-  /* line 41, ../sass/_typo.scss */
+  /* line 44, ../sass/_typo.scss */
   header#header h1, .statement strong {
     font-size: 2em;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 41, ../sass/_typo.scss */
+  /* line 44, ../sass/_typo.scss */
   header#header h1, .statement strong {
     font-size: 2.5em;
   }
 }
 
-/* line 59, ../sass/_typo.scss */
+/* line 62, ../sass/_typo.scss */
 strong {
   padding-bottom: .1em;
 }
 
-/* line 62, ../sass/_typo.scss */
-h1 {
+/* line 65, ../sass/_typo.scss */
+h1, nav li, header#header .buttons {
   font-size: 1.5em;
   line-height: 1.2em;
-  margin-bottom: 2em;
 }
 @media only screen and (min-width: 600px) {
-  /* line 62, ../sass/_typo.scss */
-  h1 {
+  /* line 65, ../sass/_typo.scss */
+  h1, nav li, header#header .buttons {
     font-size: 1.75em;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 62, ../sass/_typo.scss */
-  h1 {
+  /* line 65, ../sass/_typo.scss */
+  h1, nav li, header#header .buttons {
     font-size: 2em;
   }
 }
 
-/* line 76, ../sass/_typo.scss */
+/* line 78, ../sass/_typo.scss */
 h2 {
   font-size: 1.2em;
   line-height: 1.2em;
   margin: 2em 0 1em;
 }
 
-/* line 81, ../sass/_typo.scss */
+/* line 83, ../sass/_typo.scss */
 h3 {
   color: #da291c;
 }
 
-/* line 84, ../sass/_typo.scss */
+/* line 86, ../sass/_typo.scss */
 p, .intro li {
   max-width: 600px;
 }
@@ -195,7 +193,7 @@ a {
 
 /* line 1, ../sass/_header.scss */
 header#header {
-  background: url(/image/header.jpg) no-repeat center center;
+  background: url(/image/header-noclouds.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -213,7 +211,8 @@ header#header .logo {
   margin-top: 30px;
 }
 /* line 16, ../sass/_header.scss */
-header#header nav {
+header#header nav#main-nav {
+  border-top: solid 1px #003da5;
   z-index: 99;
   background: white;
   position: fixed;
@@ -222,59 +221,60 @@ header#header nav {
   right: 0;
 }
 /* line 25, ../sass/_header.scss */
-header#header nav div.buttons > div {
+header#header nav#main-nav div.buttons > div {
   cursor: pointer;
   color: #003da5;
-  padding: .15em .5em .2em;
-  margin: 10px 0px 10px 10px;
-  border: solid 1px;
+  margin: 10px 30px 15px 0;
   display: inline-block;
 }
 /* line 34, ../sass/_header.scss */
-header#header nav .content-list {
+header#header nav#main-nav .content-list {
   z-index: 9;
   background: white;
-  position: fixed;
-  top: 0;
+  transition: top 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+  height: 0;
+  top: 110vh;
   left: 0;
   right: 0;
-  bottom: 2.5em;
   transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
   padding: 0 10px;
-  height: 0;
   overflow: hidden;
   margin-bottom: 0;
 }
-/* line 50, ../sass/_header.scss */
-header#header nav .content-list ul {
+/* line 54, ../sass/_header.scss */
+header#header nav#main-nav .content-list ul {
   list-style: none;
   margin-top: 1em;
 }
-/* line 54, ../sass/_header.scss */
-header#header nav .content-list li {
+/* line 58, ../sass/_header.scss */
+header#header nav#main-nav .content-list li {
   margin-bottom: 1em;
   border-top: solid 1px #003da5;
 }
-/* line 58, ../sass/_header.scss */
-header#header nav .content-list.visible {
+/* line 62, ../sass/_header.scss */
+header#header nav#main-nav .content-list.visible {
   display: block;
 }
-/* line 62, ../sass/_header.scss */
-header#header nav.active {
+/* line 66, ../sass/_header.scss */
+header#header nav#main-nav.active {
   background: white;
+  transition: top 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+  top: 0;
+  height: 100vh;
 }
-/* line 63, ../sass/_header.scss */
-header#header nav.active .content-list {
-  transition: height 1s cubic-bezier(0.94, 0.4, 0.25, 1);
+/* line 72, ../sass/_header.scss */
+header#header nav#main-nav.active .content-list {
   height: auto;
+  top: 0;
 }
-/* line 67, ../sass/_header.scss */
-header#header nav.active ul {
+/* line 82, ../sass/_header.scss */
+header#header nav#main-nav.active ul {
+  display: block;
   height: 80vh;
   padding-top: 10px;
 }
-/* line 74, ../sass/_header.scss */
-header#header nav.active div {
+/* line 87, ../sass/_header.scss */
+header#header nav#main-nav.active div {
   color: #003da5;
 }
 @media only screen and (max-width: 350px) {
@@ -289,19 +289,19 @@ header#header nav.active div {
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 93, ../sass/_header.scss */
+  /* line 106, ../sass/_header.scss */
   header#header .title {
     position: absolute;
     top: 50px;
     right: 50px;
   }
-  /* line 100, ../sass/_header.scss */
+  /* line 113, ../sass/_header.scss */
   header#header h2 {
     margin-left: 30px;
   }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 109, ../sass/_header.scss */
+  /* line 122, ../sass/_header.scss */
   header#header h2 {
     margin-left: 70px;
   }
@@ -589,35 +589,38 @@ header#header nav.active div {
   }
 }
 
-/* line 1, ../sass/_page-context.scss */
+/* line 2, ../sass/_page-context.scss */
 #container {
   padding: 15px 10px;
 }
 
 @media only screen and (min-width: 500px) {
-  /* line 7, ../sass/_page-context.scss */
+  /* line 8, ../sass/_page-context.scss */
   #container {
     padding: 30px;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 13, ../sass/_page-context.scss */
+  /* line 14, ../sass/_page-context.scss */
   #container {
     padding: 50px;
   }
 }
 @media only screen and (min-width: 900px) {
-  /* line 19, ../sass/_page-context.scss */
-  #container {
-    padding: 50px 0 60px;
+  /* line 20, ../sass/_page-context.scss */
+  #container, .buttons, .content-list ul {
     width: 800px;
     margin: 0 auto;
   }
+
+  /* line 24, ../sass/_page-context.scss */
+  #container, .content-list ul {
+    padding: 50px 0 60px;
+  }
 }
 @media only screen and (min-width: 1300px) {
-  /* line 27, ../sass/_page-context.scss */
-  #container {
-    padding: 50px 0 60px;
+  /* line 31, ../sass/_page-context.scss */
+  #container, .buttons, .content-list ul {
     width: 1000px;
     margin: 0 auto;
   }

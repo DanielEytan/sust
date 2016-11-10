@@ -8,7 +8,7 @@
 	<title>SUST</title>
 	<link href="css/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body id="body">
 	<header id="header">
 		<div id="container">
 			<div class="title">
@@ -18,13 +18,13 @@
 					<img src="/image/logo.svg" alt="" width="300" height="100">
 				</figure>
 			</div>
-			<nav>
+			<nav id="main-nav">
 				<div class="buttons">
-					<div class="menu-toggle">Inhalt</div>
-					<div class="glossary-toggle">Glossar</div>
+					<div class="menu-toggle" onclick="menuFunction()">Inhalt</div>
+					<div class="glossary-toggle" onclick="glossaryFunction()">Glossar</div>
 				</div>
 				<div class="content-list">
-					<ul id="container">
+					<ul onclick="menuFunction()">
 						<li><a href="#einleitung">Einleitung</a></li>
 						<li><a href="#organisation">Organisation</a></li>
 						<li><a href="#exemplarischer-sar-fall">Exemplarischer SAR-Fall</a></li>
@@ -417,13 +417,27 @@
 			<p>
 				Verantwortlich: Schweizerische Sicherheitsuntersuchungsstelle SUST,<nobr> Bereich Aviatik</nobr><br>
 				Gestaltungskonzept und Entwicklung: <a href="http://www.prolog.work">www.prolog.work</a><br>
-				Fotonachweis: S. 7 © Kannad, S.8 © Flarm, S. 8 © Andrew Skurka (<a href="http://www.andrewskurka.com">www.andrewskurka.com</a>), S. 10 © Archiv SUST
+				Fotonachweis: S. 7 © Kannad, S.8 © Flarm, S. 8 © Andrew Skurka <a href="http://www.andrewskurka.com">(www.andrewskurka.com)</a>, S. 10 © Archiv SUST
 			</p>
 		</div>
 	</footer>
-	<script src="https://cdn.rawgit.com/meodai/3dcss/0.3.3/3dcss.js"></script>
+	<script type="text/javascript">
+	    function menuFunction()
+	    {
+	    	document.getElementById("main-nav").classList.toggle("active");
+	    	document.getElementById("glossary").classList.remove("visible");
+	    	document.getElementById("body").classList.toggle("overflow");
+	    };
+	    function glossaryFunction()
+	    {
+	    	document.getElementById("glossary").classList.toggle("visible");
+	    	document.getElementById("body").classList.toggle("overflow");
 
-	<script type="text/javascript" src="js/libs/jquery.10.2.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	    };
+
+	</script>
+...
+	<!-- <script type="text/javascript" src="js/libs/jquery.10.2.js"></script>
+	<script type="text/javascript" src="js/main.js"></script> -->
 </body>
 </html>
