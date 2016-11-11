@@ -6,7 +6,9 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	transition: height 733ms cubic-bezier(.52,.01,.16,1), 300ms background linear, 300ms color linear 450ms;
+	transition: height 733ms cubic-bezier(.52,.01,.16,1),
+				300ms background linear,
+				300ms color linear 450ms;
 	height: 4em;
 	ul {
 		padding-top: 30px;
