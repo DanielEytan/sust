@@ -1,5 +1,5 @@
 
-#container {
+.container {
 	padding: 15px 10px;
 }
 .buttons > div {
@@ -7,7 +7,7 @@
 }
 ////////////////////////////////////////////////////////// < 500px
 @media only screen and (min-width : 500px) {
-	#container {
+	.container {
 		padding: 30px;
 	}
 	.buttons > div {
@@ -17,7 +17,7 @@
 
 ////////////////////////////////////////////////////////// < 800px
 @media only screen and (min-width : 800px) {
-	#container {
+	.container {
 		padding: 50px;
 	}
 	.buttons > div {
@@ -26,12 +26,12 @@
 }
 ////////////////////////////////////////////////////////// < 800px
 @media only screen and (min-width : 900px) {
-	#container, .wrapper, .buttons {
+	.container, .wrapper, .buttons {
 		width: 800px;
 		margin: 0 auto;
 	}
 
-	#container {
+	.container {
 		padding: 50px 0 60px;
 
 	}
@@ -41,7 +41,7 @@
 }
 ////////////////////////////////////////////////////////// < 1300px
 @media only screen and (min-width : 1300px) {
-	#container, .buttons {
+	.container, .buttons {
 		width: 1000px;
 		margin: 0 auto;
 	}

@@ -101,7 +101,7 @@ html(lang='en')
 
   body#body
     header#header
-      #container
+      .container
         .title
           h1
             |Such- und Rettungsdienst
@@ -122,7 +122,7 @@ html(lang='en')
         .dismiss(onclick='dismissFunction()')
           |×
       nav#main-nav
-        #container.content-list
+        .container.content-list
           ul(onclick='menulistFunction()')
             li
               a(href='#einleitung') Einleitung
@@ -141,7 +141,7 @@ html(lang='en')
             li
               a(href='#ueber-die-sust') Über die SUST
       article#glossary
-        #container
+        .container
           ul
             li
               span ACC
@@ -287,7 +287,7 @@ html(lang='en')
                 | Gerät an Bord eines Luftfahrzeuges, das empfangene Radarsignale verarbeitet und automatisch beantwortet.
     section#main-content
       article#einleitung.intro
-        #container
+        .container
           h1 Einleitung
           p
             | In den vergangenen Jahren haben sich wiederholt Unfälle mit Luftfahrzeugen der allgemeinen Luftfahrt ereignet, bei denen Besatzung und Luftfahrzeug nur mit erheblicher Verzögerung gefunden und geborgen werden konnten. Im Rahmen der Sicherheitsunter­suchung dieser Unfälle wurde verschiedentlich festgestellt, dass die am Such- und Rettungsdienst (search and rescue – SAR) beteiligten Organisationen nicht in der Lage waren, eine rasche Suche und Rettung sicherzustellen. Es zeigte sich auch, dass selbst viele Fachleute und Nutzer der Zivilluftfahrt nur unzureichende Kennt­nisse des SAR und seiner Eigenheiten aufwiesen.
@@ -301,11 +301,11 @@ html(lang='en')
             li
               | Empfehlungen zur Verbesserung der Wirksamkeit sowohl für Leistungserbringer als auch für Leistungsbezüger
       article#organisation.organisation
-        #container
+        .container
           h1 Organisation SAR
           img(src='/image/sust-organisation.svg', alt='sust organisation')
       article#exemplarischer-sar-fall.example
-        #container
+        .container
           h1 Exemplarischer SAR-Fall
           p
             | Zur Beleuchtung der Abläufe, der Funktionsweise der Schnittstellen und zur Beurteilung der Wirksamkeit des SAR wurden in der Studie mehrere exemplarische Fälle der letzten Jahre im Detail untersucht. Alle diese Fälle weisen einen starken, aber unterschiedlich ge­arteten Bezug zum SAR auf. Es wurden bewusst Fälle aus unterschiedlichen Luftfahrzeugkategorien und mit unterschiedlichen betrieblichen Hintergründen ausgewählt.
@@ -314,7 +314,7 @@ html(lang='en')
           p
             | Dieser Fall wurde exemplarisch ausgewählt und wird hier inhaltlich stark gekürzt und vereinfacht zur Illustration der SAR-Aktionen dargestellt. Es besteht daher kein Anspruch, allgemeingültige Rückschlüsse zu erlauben.
       article#zeitleiste.timeline
-        #container
+        .container
           ul
             each event in events
               li(data-scroll)
@@ -322,7 +322,7 @@ html(lang='en')
                 span= event.event
 
       article#drei-phasen.phases
-        #container
+        .container
           h1 Drei Phasen vom Unfall bis zur Rettung
           p
             | Im Falle eines Unfalls zählt für allfällige Überlebende jede Minute. Die Zeitspanne vom Unfall bis zur Erstversorgung an der Unfallstelle beziehungsweise zur Einlieferung in ein geeignetes Spital hat den wesentlichsten Einfluss auf die Überlebenschancen respektive auf möglichst aussichtsreiche Genesungschancen. Diese Zeitspanne so gering wie möglich zu halten, muss  daher das vordringlichste Ziel sein, und zwar sowohl der betroffenen Personen aus persönlicher Sicht als auch der in den SAR involvierten Organisationen aus betrieblicher Sicht im Sinne einer bestmöglichen Erbringung ihrer Dienstleistung.
@@ -334,7 +334,7 @@ html(lang='en')
           p
             | In diesen einzelnen Phasen können sowohl die Leistungserbringer als auch die Leistungsbezüger die Zeitspanne vom Unfall bis zur Rettung beeinflussen. Im Folgenden wird aufgezeigt, was jeder Einzelne wie auch die in den SAR involvierten Organisationen zur Verbesserung der Wirksamkeit beitragen können.
       article#leistungsbezuger.user
-        #container
+        .container
           h1 Leistungsbezüger
           p
             | In der Regel ist eine rasche Hilfeleistung durch die SAR-Dienste sichergestellt, wenn klar ist, dass Hilfe benötigt wird und wo diese zu erbringen ist. Deshalb sollte die Alarmauslösung im Falle eines Unfalls unmittelbar erfolgen und den exakten Unfallort beinhalten. Dazu können die direkt Betroffenen mittels persönlicher Vorkehrungen wesentlich beitragen.
@@ -417,7 +417,7 @@ html(lang='en')
           p
             | In der kleinräumigen Schweiz mit ihrer gut ausgebauten Infrastrukturabdeckung ist die Rettung in der Regel kein Thema. Ist einmal bekannt, dass etwas passiert ist und wo genau, erfolgt in der Regel eine zielgerichtete und professionelle Hilfeleistung mit adäquaten Mitteln. Allerdings kann eine Rettungsaktion aufgrund der Umstände wie Wetter und Gelände erheblich erschwert werden. Dies kann zu aufwändigen und daher zeitraubenden Aktionen führen. Neben den persönlichen Vorkehrungen, die dazu beitragen sollen, die Zeitspanne vom Unfall bis zur Erstversorgung an der Unfallstelle möglichst kurz zu halten, sollte daher auch der persönlichen Ausrüstung die nötige Beachtung geschenkt werden.
       article#leistungserbringer.provider
-        #container
+        .container
           h1 Leistungserbringer
           p
             | Die SAR-Organisationen müssen in allen drei Phasen effizient und zielgerichtet zusammenarbeiten. Bei einer nicht eindeutigen Alarmauslösung, wo nur Anzeichen oder verschiedene Indizien für einen Unfall bestehen, müssen sie die notwendigen Schritte zur Analyse und Ausfilterung sämtlicher Informationen vornehmen. Ebenso müssen sie Fehlalarme erkennen und aussondern.
@@ -472,14 +472,14 @@ html(lang='en')
               strong Grundlagen
               |  Grundlagen für das effiziente Zusammenarbeiten im Notfall: regelmässiger Informationsaustausch zwischen den SAR-Organisationen, zweckmässige Schnittstellen und praktische Übungen unter Einbezug aller Schnittstellenpartner.
       article#ueber-die-sust
-        #container
+        .container
           h1 Über die SUST
           p
             | Die Schweizerische Sicherheitsuntersuchungsstelle (SUST) ist die Behörde der Schweizerischen Eidgenossenschaft, die Unfälle und schwere Vorfälle in der zivilen Luftfahrt, bei eidgenössisch konzessionierten Bahnen, Binnenschiffen und Seeschiffen untersucht. Sie ist von allen übrigen Verwaltungseinheiten unabhängig und hat die Form einer ausserparlamentarischen Kommission. Durch ihre Tätigkeit sollen nicht nur die unmittelbaren Ursachen gefährlicher Ereignisse, sondern auch die tieferliegenden Gründe und weitere mit ihnen verbundene Risiken ermittelt werden. Eine solche Sicherheitsuntersuchung hat zum ausschliesslichen Ziel, Erkenntnisse zu gewinnen, mit denen Unfälle und Gefahrensitua­tionen verhütet werden können und die eine Erhöhung der Sicherheit zur Folge haben. Hingegen sollen die Ergebnisse dieser Untersuchungen nicht der Klärung von Schuld- und Haftungsfragen dienen.
           p
             | Eine Sicherheitsuntersuchung besteht aus einer unabhängigen Abklärung der technischen, betrieblichen und menschlichen Umstände und Ursachen, die zum Ereignis geführt haben. Um systemische Sicherheitsdefizite fallübergreifend darlegen und entsprechende Sicherheitsempfehlungen aussprechen zu können, führt die SUST auch Studien zu sicherheitskritischen Themen durch. Zusätzlich kann sie Unterlagen und Hilfsmittel für die Prävention von Unfällen und zur Verbesserung der Sicherheit erstellen und verbreiten.
     footer
-      #container
+      .container
         h2 Impressum
         p
           |Verantwortlich: Schweizerische Sicherheitsuntersuchungsstelle SUST,
