@@ -10,7 +10,7 @@ var pug = require('gulp-pug');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 var webpack = require('webpack-stream');
-
+const autoprefixer = require('gulp-autoprefixer');
 
 var folders = {
   src: 'src/',
@@ -68,8 +68,12 @@ gulp.task('sass', function () {
     .pipe(sass({
       importer: moduleImporter()
     }).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 4 versions']
+    }))
     .pipe(gulp.dest(folders.build + '/css'));
 });
+
 
 gulp.task('serve', function() {
   browserSync.init({

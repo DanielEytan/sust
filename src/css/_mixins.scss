@@ -9,37 +9,18 @@
 // Border Radius
 
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-       -o-border-radius: $radius;
-          border-radius: $radius;
+  border-radius: $radius;
 }
 
 // Flexbox
 
 @mixin flex-container($justify:flex-start) {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
 	display: flex;
-	-webkit-flex-flow: row wrap;
-	-moz-flex-flow: row wrap;
-	-ms-flex-direction: row;
-	-ms-flex-wrap: wrap;
-	-ms-flex-flow: row wrap;
 	flex-flow: row wrap;
-	-webkit-justify-content: $justify;
-	-moz-justify-content: $justify;
-	-ms-flex-pack:$justify;
-	-ms-justify-content:$justify;
 	justify-content:$justify;
 }
 
 @mixin flex-item($width: 50%) {
-	-webkit-flex: 0 1 $width;
-	-moz-flex: 0 1 $width;
-	-ms-flex: 0 1 $width;
 	flex: 0 1 $width;
 }
 
@@ -63,9 +44,5 @@
 // Transition
 
 @mixin transition($property, $duration){
-    -webkit-transition: $property $duration; 
-    -moz-transition: $property $duration; 
-    -ms-transition: $property $duration; 
-    -o-transition: $property $duration; 
     transition: $property $duration;
 }
