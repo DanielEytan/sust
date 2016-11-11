@@ -1,5 +1,20 @@
 'use strict';
 
+var ScrollTrigger = require('scrolltrigger-classes');
+
+var trigger = new ScrollTrigger({
+  toggle: {
+    visible: 'is-visible',
+    hidden: 'is-hidden'
+  },
+  offset: {
+    x: 0,
+    y: 20
+  },
+  addHeight: true,
+  once: true
+}, document.body, window);
+
 window.menuFunction = function()
 {
     document.getElementById("nav-glossary").classList.add("menu-active");

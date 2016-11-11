@@ -6,7 +6,7 @@
 		&.intro {
 			@include blue;
 		}
-		&.organisation {	
+		&.organisation {
 			color: $blue;
 			.box {
 				&.red {
@@ -17,7 +17,7 @@
 					border: solid 2px;
 				}
 
-				
+
 				header {
 					padding: 10px;
 				}
@@ -53,7 +53,7 @@
 						}
 					}
 			}
-			
+
 
 		}
 		&.example {
@@ -66,7 +66,7 @@
 				li:not(:first-child) {
 					border-top: solid 1px;
 				}
-				
+
 				li {
 					margin-bottom: 1em;
 					display: block;
@@ -80,9 +80,17 @@
 						display: block;
 						margin-bottom: .5em;
 					}
+					&.is-hidden {
+						transition: opacity 0.5s ease;
+						opacity: 0.0;
+					}
+					&.is-visible {
+						transition: opacity 0.5s ease;
+						opacity: 1.0;
+					}
 				}
 			}
-			
+
 		}
 		&.phases {
 			@include blue;
@@ -116,7 +124,7 @@
 		////////////////////////////////////////////////////////// < 500px
 		@media only screen and (min-width : 500px) {
 			&.organisation {
-				
+
 				.box.circle {
 					width: 50%;
 				}
@@ -129,8 +137,8 @@
 				// 			@include flex-item(80%);
 				// 			&:first-of-type {
 				// 			@include flex-item(20%);
-								
-							
+
+
 
 				// 			}
 				// 		}
@@ -156,7 +164,7 @@
 						}
 					}
 				}
-			
+
 			}
 			&.phases {
 				figure {
@@ -202,10 +210,10 @@
 						@include flex-item(30%);
 
 					}
-					
+
 					&.of-two .box {
 						@include flex-item(47%);
-						
+
 					}
 				}
 		}

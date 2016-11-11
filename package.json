@@ -27,6 +27,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-watch": "^4.3.10",
     "sass-module-importer": "^1.2.1",
+    "scrolltrigger-classes": "^0.3.2",
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
