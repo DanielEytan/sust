@@ -1,0 +1,484 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='Pragma', content='no-cache')
+    meta(charset='utf-8')
+    meta(content='width=device-width, initial-scale=1, maximum-scale=1', name='viewport')
+    meta(name='robots', content='index, follow')
+    title SUST
+    link(href='css/styles.css', media='screen, projection', rel='stylesheet', type='text/css')
+
+  body#body
+    header#header
+      #container
+        .title
+          h1
+            |Such- und Rettungsdienst
+            br
+            |der zivilen Luftfahrt (SAR)
+            br
+            |in der Schweiz
+          h2
+            |Organisation und Arbeitsweise
+            br
+            |Empfehlungen zur Verbesserung der Wirksamkeit
+          figure.logo
+            img(src='/image/logo.svg', alt='sust logo', width='300', height='100')
+    section#nav-glossary
+      .buttons
+        .menu-toggle(onclick='menuFunction()') Inhalt
+        .glossary-toggle(onclick='glossaryFunction()') Glossar
+        .dismiss(onclick='dismissFunction()')
+          |×
+      nav#main-nav
+        #container.content-list
+          ul(onclick='menulistFunction()')
+            li
+              a(href='#einleitung') Einleitung
+            li
+              a(href='#organisation') Organisation
+            li
+              a(href='#exemplarischer-sar-fall') Exemplarischer SAR-Fall
+            li
+              a(href='#zeitleiste') Zeitleiste
+            li
+              a(href='#drei-phasen') Phasen vom Unfall zur Rettung
+            li
+              a(href='#leistungsbezuger') Leistungsbezüger
+            li
+              a(href='#leistungserbringer') Leistungserbringer
+            li
+              a(href='#ueber-die-sust') Über die SUST
+      article#glossary
+        #container
+          ul
+            li
+              span ACC
+              span
+                i Area Control Center
+                |–
+                b Bezirksleitstelle der Flugverkehrsleitung
+            li
+              span BAKOM
+              span
+                b Bundesamt für Kommunikation
+            li
+              span BAZL
+              span
+                b Bundesamt für Zivilluftfahrt
+            li
+              span COSPAS
+              span
+                i Cosmicheskaya Sistyema Poiska Avariynich Sudov
+                |–
+                b ehemals sowjetischer, heute russischer Bestandteil von COSPAS-SARSAT
+            li
+              span COSPAS-SARSAT
+              span
+                b System von mehreren teilweise geostationären, teilweise polumlaufenden Satelliten, die die 406-MHz-Signale von ELT, EPIRB, PLB und ähnlichen Systemen empfangen und auswerten können
+            li
+              span ELT
+              span
+                i emergency locator transmitter
+                |–
+                b automatischer Notsender für Luftfahrzeuge
+            li
+              span EPIRB
+              span
+                i emergency position indicating radio beacon
+                |–
+                b Notsender für die Schifffahrt
+            li
+              span Fedpol
+              span
+                i Federal Office of Police
+                |–
+                b Bundesamt für Polizei
+            li
+              span FIC
+              span
+                i Flight Information Centre
+                |–
+                b Fluginformationszentrale
+            li
+              span Flarm
+              span
+                b
+                  | Flarm ist das Verkehrsinformations- und Kollisionsvermeidungssystem der Firma Flarm Technology Ltd. für die allgemeine Luftfahrt
+            li
+              span HEZ
+              span
+                b Helikoptereinsatzzentrale der Rega
+            li
+              span ICAO
+              span
+                i International Civil Aviation Organization
+                |–
+                b Internationale Zivilluftfahrtorganisation
+            li
+              span IMSI-catcher
+              span
+                b Gerät, das die internationale Mobilfunk-Teilnehmerkennung
+                |  (international mobile subscriber identity – IMSI)
+                b
+                  | eines Mobiltelefons auslesen und den Standort eines Mobiltelefons innerhalb einer Funkzelle eingrenzen kann
+            li
+              span Kapo
+              span
+                b Kantonspolizei
+            li
+              span LW
+              span
+                b Luftwaffe
+            li
+              span MCC
+              span
+                i Mission Control Center
+                |  –
+                b Missions-Kontrollzentrum des COSPAS-SARSAT-Systems in Toulouse
+            li
+              span OGN
+              span
+                i Open Glider Network:
+                b
+                  | Flarm- und internetbasiertes Trackingsystem für Segelflugzeuge und andere Luftfahrzeuge
+            li
+              span PLB
+              span
+                i personal locator beacon
+                |  –
+                b persönlicher Notsender
+            li
+              span RCC
+              span
+                i Rescue Coordination Centre
+                |  –
+                b Koordinationszentrum
+            li
+              span Rega
+              span
+                b Schweizerische Rettungsflugwacht
+            li
+              span SAR
+              span
+                i search and rescue
+                |  –
+                b Such- und Rettungsdienst
+            li
+              span SARSAT
+              span
+                i Search and Rescue Satellite Aided Tracking
+                |  –
+                b westlicher Bestandteil von COSPAS-SARSAT
+            li
+              span SDO
+              span
+                i Senior Duty Officer
+                |  –
+                b Pikettoffizier der Luftwaffe
+            li
+              span SEND
+              span
+                i satellite emergency notification device:
+                b
+                  | portables Gerät für persönliche Notfallkommunikation, dessen Alarmsignal und Position von kommerziellen Satelliten anstelle von COSPAS-SARSAT-Satelliten empfangen werden
+            li
+              span Skyguide
+              span
+                b Schweizerische Aktiengesellschaft für zivile und militärische Flugsicherung
+            li
+              span SUST
+              span
+                b Schweizerische Sicherheitsuntersuchungsstelle
+            li
+              span Transponder
+              span
+                | Gerät an Bord eines Luftfahrzeuges, das empfangene Radarsignale verarbeitet und automatisch beantwortet.
+    section#main-content
+      article#einleitung.intro
+        #container
+          h1 Einleitung
+          p
+            | In den vergangenen Jahren haben sich wiederholt Unfälle mit Luftfahrzeugen der allgemeinen Luftfahrt ereignet, bei denen Besatzung und Luftfahrzeug nur mit erheblicher Verzögerung gefunden und geborgen werden konnten. Im Rahmen der Sicherheitsunter­suchung dieser Unfälle wurde verschiedentlich festgestellt, dass die am Such- und Rettungsdienst (search and rescue – SAR) beteiligten Organisationen nicht in der Lage waren, eine rasche Suche und Rettung sicherzustellen. Es zeigte sich auch, dass selbst viele Fachleute und Nutzer der Zivilluftfahrt nur unzureichende Kennt­nisse des SAR und seiner Eigenheiten aufwiesen.
+          p
+            | Die SUST hat in Zusammenarbeit mit den beteiligten Verkehrskreisen eine umfassende Studie zum Thema SAR durchgeführt. Diese Website beinhaltet wesentliche Elemente der Studie sowohl für den Fachmann als auch für eine breite Öffentlichkeit knapp zusammengefasst:
+          ul
+            li
+              | Organisation und Arbeitsweise des SAR;
+            li
+              | Illustration der Abläufe anhand eines exemplarischen SAR-Falls
+            li
+              | Empfehlungen zur Verbesserung der Wirksamkeit sowohl für Leistungserbringer als auch für Leistungsbezüger
+      article#organisation.organisation
+        #container
+          h1 Organisation SAR
+          img(src='/image/sust-organisation.svg', alt='sust organisation')
+      article#exemplarischer-sar-fall.example
+        #container
+          h1 Exemplarischer SAR-Fall
+          p
+            | Zur Beleuchtung der Abläufe, der Funktionsweise der Schnittstellen und zur Beurteilung der Wirksamkeit des SAR wurden in der Studie mehrere exemplarische Fälle der letzten Jahre im Detail untersucht. Alle diese Fälle weisen einen starken, aber unterschiedlich ge­arteten Bezug zum SAR auf. Es wurden bewusst Fälle aus unterschiedlichen Luftfahrzeugkategorien und mit unterschiedlichen betrieblichen Hintergründen ausgewählt.
+          p
+            | Bei einem dieser Fälle verunfallte ein Pilot mit einem Segelflugzeug anlässlich eines Segelflugwettbewerbs im Gebirge nahe der Grenze zu Österreich und kam dabei ums Leben. Das Segelflugzeug wurde beim Aufprall zerstört, der 406-MHz-Notsender an Bord wurde aus dem Segelflugzeug gerissen, beschädigt und von seiner Sendeantenne getrennt, so dass keine Notsignale emp­fangbar waren. Im Flugzeug war ein im Bordrechner integriertes Flarm-System eingebaut. Das Mobiltelefon des Piloten wurde nicht gefunden.
+          p
+            | Dieser Fall wurde exemplarisch ausgewählt und wird hier inhaltlich stark gekürzt und vereinfacht zur Illustration der SAR-Aktionen dargestellt. Es besteht daher kein Anspruch, allgemeingültige Rückschlüsse zu erlauben.
+      article#zeitleiste.timeline
+        #container
+          ul
+            li
+              span Zeit
+              span Ereignis
+            li
+              span 00h 00min
+              span Unfall
+            li
+              span 01h 30min
+              span Über Flugfunk und Mobiltelefon wird vom Startplatz aus versucht, den Piloten des Segelflugzeuges zu erreichen.
+            li
+              span 02h 30min
+              span Zwei Piloten versuchen, den Piloten über verschiedene Flugfunkfrequenzen aus Segelflugzeugen in der Luft zu kontaktieren.
+            li
+              span 03h 20min
+              span Reisemotorsegler starten vom Startplatz aus zu Suchflügen ins Fluggebiet des Segelflugwettbewerbs.
+            li
+              span 03h 45min
+              span Das RCC wird über das vermisste Segelflugzeug informiert.
+            li
+              span 04h 15min
+              span Der Hersteller des Kollisionswarnsystems Flarm liefert dem RCC erste Auswertungsresultate der Flugwegrekonsliuktion mit vermuteter letzter Position des Segelflugzeuges.
+            li
+              span 04h 17min
+              span Das Fedpol meldet dem RCC, dass das Mobiltelefon des Piloten nirgends eingeloggt sei.
+            li
+              span 04h 25min
+              span Das FIC Zürich teilt dem RCC mit, dass nie ein Segelflieger auf seiner Frequenz gewesen sei.
+            li
+              span 04h 30min
+              span Das RCC informiert den SDO der LW, dass mit einem Einsatz zu rechnen sei; es würden noch weitere Auswertungen des Flarm-Herstellers abgewartet.
+            li
+              span 04h 47min
+              span Der Flarm-Hersteller liefert dem RCC neue Auswertungsresultate mit einer rekonsliuierten Position des Segelflugzeuges, die – wie sich später zeigen wird – etwa 100 m von der tatsächlichen Unfallstelle entfernt liegt.
+            li
+              span 05h 07min
+              span Die HEZ der Rega bietet den Rettungshelikopter der Basis Untervaz für einen Suchflug auf.
+            li
+              span 05h 30min
+              span Die HEZ, der Rega-Pilot und der Flarm-Hersteller besprechen das primäre Suchgebiet.
+            li
+              span 06h 20min
+              span Der SDO informiert das RCC, dass der SAR-Helikopter um 23 Uhr ab Payerne starten wird.
+            li
+              span 06h 50min
+              span Die ACC Zürich meldet, dass Luftfahrzeuge keine Notsignale gemeldet hätten.
+            li
+              span 06h 58min
+              span Das BAKOM meldet, dass von Bodenantennen keine Notsignale empfangen wurden.
+            li
+              span 07h 20min
+              span Das RCC informiert sich bei Personen auf dem Startplatz über die abzufliegende Wettbewerbsaufgabe und den fliegerischen Hintergrund des Piloten.
+            li
+              span 09h 24min
+              span Das Fedpol und das RCC sind übereinstimmend der Meinung, dass das Suchgebiet für den Einsatz eines IMSI-catcher noch zu gross sei.
+            li
+              span 09h 45min
+              span Der SAR-Helikopter landet nach einer erfolglosen Suchaktion in Frauenkirch.
+            li
+              span 12h 07min
+              span Die Besatzung des SAR-Helikopters informiert das RCC, dass sie vor 5 Uhr zu einem weiteren Suchflug starten werde.
+            li
+              span 13h 40min
+              span Das RCC wird informiert, dass ein Helikopter des BAZL um 7 Uhr in Untervaz landen werde.
+            li
+              span 14h 38min
+              span Das RCC fragt das RCC Wien an, ob sie einen bis zwei Helikopter in den Teil des Suchgebiets, der auf österreichischem Staatsgebiet liegt, schicken könnten.
+            li
+              span 15h 19min
+              span Das RCC wird informiert, dass ein Briefing mit den Besatzungen des SAR-, des Rega- und des BAZL-Helikopters stattgefunden habe.
+            li
+              span 15h 40min
+              span Das RCC wird informiert, dass der BAZL-Helikopter zu einem Suchflug ab Untervaz starten würde und dass drei Helikopter der LW folgen würden.
+            li
+              span 15h 41min
+              span Das RCC Wien informiert, dass ein Helikopter ab ca. 09:30 Uhr das Suchgebiet auf österreichischem Staatsgebiet abfliegen werde.
+            li
+              span 16h 00min
+              span Personen auf dem Startplatz bringen das persönliche Login des Piloten zur Ortung seines Mobiltelefons in Erfahrung.
+            li
+              span 16h 32min
+              span Die Kantonspolizei informiert, dass die Ortung des Mobiltelefons des Piloten ergebnislos geblieben und das Suchgebiet für den Einsatz des IMSI-catcher zu gross sei.
+            li
+              span 18h 45min
+              span Das Wrack des Segelflugzeuges wird aus einem Helikopter der Luftwaffe gesichtet. Die Koordinaten des Unfallorts werden dem RCC mitgeteilt.
+            li
+              span 19h 30min
+              span Am Unfallort kann der Rega-Arzt nur noch den Tod des Piloten feststellen.
+      article#drei-phasen.phases
+        #container
+          h1 Drei Phasen vom Unfall bis zur Rettung
+          p
+            | Im Falle eines Unfalls zählt für allfällige Überlebende jede Minute. Die Zeitspanne vom Unfall bis zur Erstversorgung an der Unfallstelle beziehungsweise zur Einlieferung in ein geeignetes Spital hat den wesentlichsten Einfluss auf die Überlebenschancen respektive auf möglichst aussichtsreiche Genesungschancen. Diese Zeitspanne so gering wie möglich zu halten, muss  daher das vordringlichste Ziel sein, und zwar sowohl der betroffenen Personen aus persönlicher Sicht als auch der in den SAR involvierten Organisationen aus betrieblicher Sicht im Sinne einer bestmöglichen Erbringung ihrer Dienstleistung.
+          .graphic
+            figure.mobile
+              img(src='/image/3_phasen_hoch.png', alt='phasen')
+            figure.desktop
+              img(src='/image/3_phasen.png', alt='phasen')
+          p
+            | In diesen einzelnen Phasen können sowohl die Leistungserbringer als auch die Leistungsbezüger die Zeitspanne vom Unfall bis zur Rettung beeinflussen. Im Folgenden wird aufgezeigt, was jeder Einzelne wie auch die in den SAR involvierten Organisationen zur Verbesserung der Wirksamkeit beitragen können.
+      article#leistungsbezuger.user
+        #container
+          h1 Leistungsbezüger
+          p
+            | In der Regel ist eine rasche Hilfeleistung durch die SAR-Dienste sichergestellt, wenn klar ist, dass Hilfe benötigt wird und wo diese zu erbringen ist. Deshalb sollte die Alarmauslösung im Falle eines Unfalls unmittelbar erfolgen und den exakten Unfallort beinhalten. Dazu können die direkt Betroffenen mittels persönlicher Vorkehrungen wesentlich beitragen.
+          h2 Technische Vorkehrungen
+          .group.of-two
+            figure
+              img(src='/image/Kannad-Integra-ELT.jpg', alt='kannad')
+            .text
+              h3 ELT
+              p
+                | Für die Alarmierung der SAR-Einsatzkräfte nach einem Flugunfall und für die Lokalisierung von vermissten Luftfahrzeugen hat die ICAO als technisches Hilfsmittel den Einbau von Notsendern in Luftfahrzeugen vorgesehen und reglementiert. Notsender senden nach Aktivierung ein Notsignal aus, das von Satelliten, Luftfahrzeugen und bodengebundenen Empfangsstationen empfangen werden kann. Die Aktivierung eines ELT erfolgt beim Aufprall eines Luftfahrzeuges automatisch. Jeder ELT kann auch manuell aktiviert werden. Auf den international vereinbarten Notsenderfrequenzen 121.5 MHz und 406 MHz werden verschiedene Alarmierungs- und Ortungsdienstleistungen angeboten.
+          .statement
+            p
+              strong Sofort alarmieren:
+              |                                 beim geringsten Verdacht eines Flugunfalls unverzüglich das RCC informieren.
+          .group.of-two
+            figure
+              img(src='/image/pilot-view.jpg', alt='pilot sicht')
+            .text
+              h3 Transponder, Funk und Flarm
+              p
+                | Systeme wie Transponder, Funk oder Flarm können wichtige Rückschlüsse auf den Flugverlauf und den Flugweg erlauben. Sie haben den Vorteil, dass sich mit ihnen der Flugweg rückwirkend vollständig oder zumindest punktuell tracken lässt. Aber aufgepasst: Diese Systeme lösen bei einem Unfall nicht automatisch Alarm aus! Sie können deshalb nur als ergänzende Hilfsmittel bei einer SAR-Aktion dienen.
+          .statement
+            p
+              strong Vorkehrungen treffen,
+              |  die eine unmittelbare Alarmauslösung gewährleisten, die gleichzeitig den exakten Unfallort beinhaltet.
+          .group.of-two
+            figure
+              img(src='/image/plb.jpg', alt='plb')
+            .text
+              h3 PLB und SEND
+              p
+                | Nicht spezifisch für die Luftfahrt entwickelte, kleine, tragbare Sender, die in einer Notsituation manuell aktiviert werden müssen, können als Hilfsmittel für den SAR auf individueller Basis sinnvoll eingesetzt werden. Deren Alarmsignale werden zusammen mit der aktuellen Position des Geräts von Satelliten empfangen und über eine Bodenstation an eine Einsatzleitstelle weitergeleitet.
+          .statement
+            p
+              strong Spuren hinterlassen,
+              |  die sich durch die SAR-Dienste rasch und einfach rekonstruieren lassen.
+          .group
+            h3 Live-Tracking
+            p
+              | Die Zukunft dürfte bei Systemen liegen, die ein Live-Tracking erlauben wie zum Beispiel das OGN. Solche Systeme würden es den SAR-Diensten erlauben, sehr rasch zum Beispiel über webbasierte Anwendungen über eine Aufzeichnung des fraglichen Flugweges zu verfügen.
+          .statement.left
+            p
+              strong «Ein System ist kein System!»
+              | Weil einzelne Vorkehrungen wirkungslos bleiben können, sollten möglichst viele verschiedene Vorkehrungen parallel getroffen werden.
+          .statement
+            p
+              strong 97 % Fehlalarme
+              |  Fehlalarme verhindern und ausgelöste Fehlalarme sofort dem RCC melden!
+          .group
+            h3 Mobiltelefone, Notsuche und IMSI-catcher
+            p
+              | Mobiltelefone können eine grosse Hilfe bei einer SAR-Aktion darstellen. Das Suchgebiet kann durch eine Notsuche, die durch die Polizei veranlasst werden muss, stark eingeschränkt werden. Im Falle des Einsatzes eines IMSI-catcher ist im Idealfall gar eine Ortung des Mobiltelefons möglich. Spezielle Apps auf Smartphones erlauben ebenfalls die Ortung des Mobiltelefons, sofern die Zugangsdaten zu den entsprechenden Anwendungen bekannt sind.
+          .statement
+            p
+              strong Es kann mehrere Stunden dauern,
+              |  bis die Rettungskräfte am Unfallort eintreffen.
+          h2 Organisatorische Vorkehrungen
+          .group.of-two
+            figure
+              img(src='/image/FPLATC.jpg', alt='fplatc')
+            .text
+              h3 Flugpläne
+              p
+                | Wenn ein Flugplan aufgegeben wurde, benachrichtigt der Alarmdienst der Flugsicherung die SAR-Dienste bei überfälligen Luftfahrzeugen automatisch. Dieser Umstand sollte von den direkt Betroffenen gezielt genutzt werden, erfordert aber beim Deklarieren und Schliessen von Flugplänen Disziplin, um keine Fehlalarme auszulösen.
+          .statement
+            p
+              strong Die persönliche Ausrüstung
+              |  sollte ein mehrstündiges unbeschadetes Überdauern am Unfallort ermöglichen und Hilfsmittel beinhalten, um sich bemerkbar zu machen.
+          .group
+            h3 Lokale und individuelle Alarmsysteme
+            p
+              | Fluggruppen und Vereine können mit wenig Aufwand gut funktionierende lokale Alarmsysteme aufbauen. Startlisten oder lokale Fluganzeigen mit den wesentlichen Informationen zu einem Flug können unter vereinbarten Kriterien zu einer automatischen Alarmauslösung führen. Jeder Pilot sollte zusätzlich auf persönlicher, individueller Basis Vorkehrungen treffen, die einerseits dem Zweck der Alarmauslösung unter vordefinierten Kriterien und andererseits dem Tracking des Flugweges dienen können. Informationen wie Mobiltelefonnummern, Zugangsdaten zu Ortungssystemen wie Smartphones oder SPOT, Flarm-ID, Notfallkontakte usw. sollten für eine allfällige SAR-Aktion rasch zur Verfügung stehen.
+          figure
+            img(src='/image/berg.jpg', alt='berg')
+          .statement
+            p
+              strong In unwegsamem Gelände
+              |  bis zum Eintreffen der Rettungskräfte beim Wrack bleiben.
+          p
+            | In der kleinräumigen Schweiz mit ihrer gut ausgebauten Infrastrukturabdeckung ist die Rettung in der Regel kein Thema. Ist einmal bekannt, dass etwas passiert ist und wo genau, erfolgt in der Regel eine zielgerichtete und professionelle Hilfeleistung mit adäquaten Mitteln. Allerdings kann eine Rettungsaktion aufgrund der Umstände wie Wetter und Gelände erheblich erschwert werden. Dies kann zu aufwändigen und daher zeitraubenden Aktionen führen. Neben den persönlichen Vorkehrungen, die dazu beitragen sollen, die Zeitspanne vom Unfall bis zur Erstversorgung an der Unfallstelle möglichst kurz zu halten, sollte daher auch der persönlichen Ausrüstung die nötige Beachtung geschenkt werden.
+      article#leistungserbringer.provider
+        #container
+          h1 Leistungserbringer
+          p
+            | Die SAR-Organisationen müssen in allen drei Phasen effizient und zielgerichtet zusammenarbeiten. Bei einer nicht eindeutigen Alarmauslösung, wo nur Anzeichen oder verschiedene Indizien für einen Unfall bestehen, müssen sie die notwendigen Schritte zur Analyse und Ausfilterung sämtlicher Informationen vornehmen. Ebenso müssen sie Fehlalarme erkennen und aussondern.
+          p
+            | Falls der exakte Unfallort nicht bekannt ist, muss die Suche zielgerichtet und koordiniert organisiert werden, um die genaue Position der Unfallstelle möglichst
+            | rasch bestimmen zu können.
+          .statement.left
+            p
+              strong Zeit gewinnen:
+              | zuerst das RCC informieren und erst danach eigene Abklärungen in Absprache mit dem RCC tätigen!
+          h2 Umgang mit Fehlalarmen
+          p
+            | Das rasche Erkennen von echten Alarmen beziehungsweise das Aussondern von Fehlalarmen wird im RCC stets eine wesentliche Aufgabe bleiben, auch wenn die aktuell grosse Anzahl an Fehlalarmen von ca. 97 % möglicherweise reduziert werden kann. Die überwiegende Mehrheit der Fehlalarme können Mitarbeiter im RCC innert nützlicher Frist durch Rückfragen respektive Abklärungen als solche erkennen. Bei den verbleibenden ungeklärten Fällen stellt sich die Frage, ob zur Rettung allfällig gefährdeter Menschenleben nicht grundsätzlich nach einer bestimmten Zeitspanne die SAR-Dienste alarmiert werden sollten.
+          .statement
+            p
+              strong Mitdenken:
+              |  Das RCC kann einen echten Alarm einfacher erkennen, wenn Informationen zu einem Unfall mehrfach auf verschiedenen Kanälen eingehen.
+          h2 Kompetenz und Arbeitstechnik
+          p
+            | Für eine rasche Suche und Rettung sind die Kompetenz und die Arbeitstechnik im RCC entscheidend: Eingehende Informationen bewerten und einordnen, externe Spezialisten und Mittel aus verschiedenen Organisationen einsetzen, gewonnene Erkenntnisse richtig interpretieren und weiterverwenden sowie die not­wendigen Massnahmen zielgerichtet einleiten, all dies erfordert von den Mitarbeitern des RCC grosse aviatische Kompetenz in sämtlichen Sparten der Fliegerei und Erfahrung.
+          .statement.left
+            p
+              strong Aviatische Kompetenz
+              |  Die Koordinationsaufgabe im RCC erfordert grosse aviatische Kompetenz in sämtlichen Sparten der Fliegerei.
+          p
+            | Im Wettlauf gegen die Zeit muss das RCC seine Koordinationsaufgabe derart organisieren, dass der Einsatz von Spezialisten und Organisationen sowie die eigenen Abklärungen und Entscheidungen möglichst parallel erfolgen können. Voraussetzung dafür sind genügend kompetente und erfahrene Mitarbeiter sowie die entsprechende Organisationsform.
+          .statement
+            p
+              strong Zusätzliche Mitarbeiter
+              |  Bei Bedarf situativ zusätzliche kompetente Mitarbeiter einsetzen.
+          h2 Schnittstellen zwischen den Organisationen
+          p
+            | Die Erbringung des SAR mit seinen vielschichtigen und komplexen Abläufen erfordert zwangsläufig die Zusammenarbeit von verschiedenen Spezialisten. Diese finden sich oft in bestehenden Organisationen, die auf die Erbringung bestimmter Leistungen spezialisiert sind.
+          .statement.left
+            p
+              strong Kompetenz und Arbeitstechnik
+              |  sind im RCC bei lang andauernden Suchaktionen besonders erfolgsrelevant.
+          .statement
+            p
+              strong Vorsorglich Alarm auslösen
+              |  Bei unklarer Sachlage nach einer fix bestimmten Zeitspanne vorsorglich Alarm auslösen.
+          p
+            | Dem BAZL als Aufsichtsorgan über den SAR und dem RCC als Koordinationszentrum einer SAR-Aktion kommt daher die entscheidende Aufgabe zu, bereits im Vorfeld einer Aktion die Schnitt­stellen zweckmässig zu organisieren und den ständigen Austausch zwischen den Organisationen zu pflegen. Im Notfall sollte unverzüglich und ohne Reibungsverluste auf die jeweils benötigten Organisationen und deren Kompetenz zurückgegriffen werden können.
+          .statement.left
+            p
+              strong Interdisziplinäre Teams
+              |  Bei komplexen SAR-Aktionen sollte ein interdisziplinäres Team an einem gemeinsamen Ort zusammenarbeiten.
+          p
+            | Für komplexere SAR-Aktionen wäre eine grundsätzlich andere Form des Arbeitens in einem interdisziplinären Team an einem gemeinsamen Ort denkbar. Dies würde eine parallele Arbeitsweise, den direkten Austausch, eine permanente Interaktion und auch kritisches Nachfragen ermöglichen und dürfte so zu einer gegenseitigen Befruchtung der verschiedenen Organisationen führen.
+          .statement
+            p
+              strong Grundlagen
+              |  Grundlagen für das effiziente Zusammenarbeiten im Notfall: regelmässiger Informationsaustausch zwischen den SAR-Organisationen, zweckmässige Schnittstellen und praktische Übungen unter Einbezug aller Schnittstellenpartner.
+      article#ueber-die-sust
+        #container
+          h1 Über die SUST
+          p
+            | Die Schweizerische Sicherheitsuntersuchungsstelle (SUST) ist die Behörde der Schweizerischen Eidgenossenschaft, die Unfälle und schwere Vorfälle in der zivilen Luftfahrt, bei eidgenössisch konzessionierten Bahnen, Binnenschiffen und Seeschiffen untersucht. Sie ist von allen übrigen Verwaltungseinheiten unabhängig und hat die Form einer ausserparlamentarischen Kommission. Durch ihre Tätigkeit sollen nicht nur die unmittelbaren Ursachen gefährlicher Ereignisse, sondern auch die tieferliegenden Gründe und weitere mit ihnen verbundene Risiken ermittelt werden. Eine solche Sicherheitsuntersuchung hat zum ausschliesslichen Ziel, Erkenntnisse zu gewinnen, mit denen Unfälle und Gefahrensitua­tionen verhütet werden können und die eine Erhöhung der Sicherheit zur Folge haben. Hingegen sollen die Ergebnisse dieser Untersuchungen nicht der Klärung von Schuld- und Haftungsfragen dienen.
+          p
+            | Eine Sicherheitsuntersuchung besteht aus einer unabhängigen Abklärung der technischen, betrieblichen und menschlichen Umstände und Ursachen, die zum Ereignis geführt haben. Um systemische Sicherheitsdefizite fallübergreifend darlegen und entsprechende Sicherheitsempfehlungen aussprechen zu können, führt die SUST auch Studien zu sicherheitskritischen Themen durch. Zusätzlich kann sie Unterlagen und Hilfsmittel für die Prävention von Unfällen und zur Verbesserung der Sicherheit erstellen und verbreiten.
+    footer
+      #container
+        h2 Impressum
+        p
+          | Verantwortlich: Schweizerische Sicherheitsuntersuchungsstelle SUST,
+          nobr  Bereich Aviatik
+          br
+          |                                 Gestaltungskonzept und Entwicklung:
+          a(href='http://www.prolog.work') www.prolog.work
+          br
+          |                                 Fotonachweis: S. 7 © Kannad, S.8 © Flarm, S. 8 © Andrew Skurka
+          a(href='http://www.andrewskurka.com') (www.andrewskurka.com)
+          | , S. 10 © Archiv SUST
