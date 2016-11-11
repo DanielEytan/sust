@@ -36,7 +36,8 @@ gulp.task('js', function() {
           modulesDirectories: [folders.build + '/js', 'node_modules']
         }
     }))
-    .pipe(gulp.dest(folders.build + 'js/'));
+    .pipe(gulp.dest(folders.build + 'js/'))
+    .pipe(reload({stream: true}));
 });
 
 gulp.task('clean', function(){
@@ -57,7 +58,8 @@ gulp.task('html', function buildHTML() {
 gulp.task('images', function(){
   return gulp.src(files.images)
         .pipe(imagemin())
-        .pipe(gulp.dest(folders.build + 'image/'));
+        .pipe(gulp.dest(folders.build + 'image/'))
+        .pipe(reload({stream: true}));
 });
 gulp.task('copy:fonts', function() {
    return gulp.src(files.fonts).pipe(gulp.dest(folders.build + 'font/'));
@@ -66,12 +68,14 @@ gulp.task('copy:fonts', function() {
 gulp.task('sass', function () {
   return gulp.src(files.sass)
     .pipe(sass({
-      importer: moduleImporter()
+      importer: moduleImporter(),
+      errLogToConsole: true
     }).on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 4 versions']
     }))
-    .pipe(gulp.dest(folders.build + '/css'));
+    .pipe(gulp.dest(folders.build + '/css'))
+    .pipe(reload({stream: true}));
 });
 
 
@@ -79,11 +83,10 @@ gulp.task('serve', function() {
   browserSync.init({
       server: folders.build
   });
-
-  gulp.watch(files.pug, gulp.series('html', reload));
-  gulp.watch(files.images, gulp.series('images', reload));
-  gulp.watch(files.sass, gulp.series('sass', reload));
-  gulp.watch(files.js, gulp.series('js', reload));
+  gulp.watch(files.pug).on('change', gulp.series('html', reload));
+  gulp.watch(files.images).on('change', gulp.series('images', reload));
+  gulp.watch(files.sass).on('change', gulp.series('sass', reload));
+  gulp.watch(files.js).on('change', gulp.series('js', reload));
 });
 
 gulp.task('all', gulp.parallel('copy:fonts', 'images', 'sass', 'html', 'js'));
