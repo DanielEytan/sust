@@ -32,10 +32,18 @@
 				&.circle {
 					@include blue;
 					width: 75%;
-					margin: 0 auto;
+					margin: 0 auto 2em;
 				}
 			}
 			.group {
+				&.of-two .box{
+					header, ul {
+						border: solid 2px $blue;
+					}
+					ul {
+							border-top: 0;
+						}
+				}
 				.box {
 						header, ul {
 							border: solid 2px $bluelight;
@@ -53,23 +61,24 @@
 		}
 		&.timeline {
 
-			table {
-				tr:not(:first-child) {
+			ul {
+				padding-left: 0;
+				li:not(:first-child) {
 					border-top: solid 1px;
 				}
-				th {
-					visibility: hidden;
-				}
 				
-				td,th {
-
+				li {
+					margin-bottom: 1em;
 					display: block;
 					&:first-child {
-						padding: .2em 0 .5em;
-						width: 200px;
+						display: none;
 					}
 					&:last-child {
 						padding-bottom: 1em;
+					}
+					span {
+						display: block;
+						margin-bottom: .5em;
 					}
 				}
 			}
@@ -107,18 +116,9 @@
 		////////////////////////////////////////////////////////// < 500px
 		@media only screen and (min-width : 500px) {
 			&.organisation {
-				.group {
-
-					@include flex-container(space-between);
-					width: 100%;
-					.box {
-						@include flex-item(30%);
-					}
-					
-					&.of-two .box {
-						@include flex-item(47%);
-						
-					}
+				
+				.box.circle {
+					width: 50%;
 				}
 			}
 			&.timeline {
@@ -136,26 +136,27 @@
 				// 		}
 				// 	}
 				// }
-				table {
+				ul {
 					margin-top: 5em;
-					th {
-						visibility: visible;
-					}
-					td,th {
-						display: table-cell;
-						vertical-align: top;
-						&:first-child {
-							padding-top: 0;
-							width: 100px;
+					li {
+						span {
+							display: inline-block;
+							width: 80%;
+							vertical-align:top;
+							&:first-of-type {
+								width: 20%;
+							}
+						}
+						&:first-child  {
+							display: block;
+							span {
+								transform: rotate(-90deg);
+								transform-origin: left top 0;
+							}
 						}
 					}
-					th span {
-						display: inline-block;
-						transform: rotate(-90deg);
-						transform-origin: left top 0;
-						// margin: 0 50px;
-					}
 				}
+			
 			}
 			&.phases {
 				figure {
@@ -193,6 +194,21 @@
 				margin-left: 50px;
 			}
 		}
+		@media only screen and (min-width : 600px) {
+			&.organisation .group {
+					@include flex-container(space-between);
+					width: 100%;
+					.box {
+						@include flex-item(30%);
+
+					}
+					
+					&.of-two .box {
+						@include flex-item(47%);
+						
+					}
+				}
+		}
 		////////////////////////////////////////////////////////// < 800px
 		@media only screen and (min-width : 800px) {
 			&.organisation {
@@ -210,7 +226,7 @@
 							background: white;
 							position: relative;
 							z-index: 9;
-							padding: 50px;
+							padding: 50%;
 							h2, li {
 								width: 300px;
 								margin: 0 auto;
@@ -233,7 +249,11 @@
 					     	padding-top: 10px;
 					     	height:200px;
 					     	width:400px;
-					     	border-radius: 0 0 300px 300px ;
+					     	border-radius: 0 0 300px 300px;
+					     	li {
+					     		margin: 0 auto;
+					     		width: 280px;
+					     	}
 					     }
 					}
 				}
@@ -246,7 +266,10 @@
 			}
 			&.user, &.provider {
 				.statement {
-					margin-left: 100px;
+					margin-left: 400px;
+					&.left {
+						margin-left: -50px;
+					}
 				}
 			}
 		}
@@ -270,6 +293,11 @@
 			// 	}
 
 			// }
+			&.user, &.provider {
+				.statement {
+					margin-left: 520px;
+				}
+			}
 		}
 	}
 }
