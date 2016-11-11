@@ -62,6 +62,7 @@
 		&.timeline {
 
 			ul {
+				perspective: 1200;
 				padding-left: 0;
 				li:not(:first-child) {
 					border-top: solid 1px;
@@ -81,12 +82,17 @@
 						margin-bottom: .5em;
 					}
 					&.is-hidden {
-						transition: opacity 0.5s ease;
-						opacity: 0.0;
+						opacity: 0;
+						transition: 366ms transform cubic-bezier(.52,.01,.16,1) 100ms, 200ms opacity 200ms;
+						transform: translate(0,-100%);
+						transform-origin: 50% 0;
+						backface-visibilty: hidden;
 					}
 					&.is-visible {
-						transition: opacity 0.5s ease;
-						opacity: 1.0;
+						opacity: 1;
+						transition: 366ms transform cubic-bezier(.52,.01,.16,1) 100ms, 200ms opacity 200ms;
+						transform: translate(0,0);
+						transform-origin: 50% 0;
 					}
 				}
 			}

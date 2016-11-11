@@ -9,7 +9,7 @@ var trigger = new ScrollTrigger({
   },
   offset: {
     x: 0,
-    y: 20
+    y: 100
   },
   addHeight: true,
   once: true
