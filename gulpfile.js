@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var moduleImporter = require('sass-module-importer');
 var watch = require('gulp-watch');
 var clean = require('gulp-clean');
 var imagemin = require('gulp-imagemin');
@@ -48,7 +49,9 @@ gulp.task('copy:fonts', function() {
 
 gulp.task('sass', function () {
   return gulp.src(files.sass)
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      importer: moduleImporter()
+    }).on('error', sass.logError))
     .pipe(gulp.dest(folders.build + '/css'));
 });
 
