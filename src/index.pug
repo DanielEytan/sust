@@ -205,15 +205,16 @@ html(lang='en')
           img(src='/image/sust-organisation.svg', alt='sust organisation')
       article#exemplarischer-sar-fall.example
         .container
-          h1 Exemplarischer SAR-Fall
-          p
-            | Zur Beleuchtung der Abläufe, der Funktionsweise der Schnittstellen und zur Beurteilung der Wirksamkeit des SAR wurden in der Studie mehrere exemplarische Fälle der letzten Jahre im Detail untersucht. Alle diese Fälle weisen einen starken, aber unterschiedlich ge­arteten Bezug zum SAR auf. Es wurden bewusst Fälle aus unterschiedlichen Luftfahrzeugkategorien und mit unterschiedlichen betrieblichen Hintergründen ausgewählt.
-          p
-            | Bei einem dieser Fälle verunfallte ein Pilot mit einem Segelflugzeug anlässlich eines Segelflugwettbewerbs im Gebirge nahe der Grenze zu Österreich und kam dabei ums Leben. Das Segelflugzeug wurde beim Aufprall zerstört, der 406-MHz-Notsender an Bord wurde aus dem Segelflugzeug gerissen, beschädigt und von seiner Sendeantenne getrennt, so dass keine Notsignale emp­fangbar waren. Im Flugzeug war ein im Bordrechner integriertes Flarm-System eingebaut. Das Mobiltelefon des Piloten wurde nicht gefunden.
-          p
-            | Dieser Fall wurde exemplarisch ausgewählt und wird hier inhaltlich stark gekürzt und vereinfacht zur Illustration der SAR-Aktionen dargestellt. Es besteht daher kein Anspruch, allgemeingültige Rückschlüsse zu erlauben.
+          :markdown-it
+            # Exemplarischer SAR-Fall
+            Zur Beleuchtung der Abläufe, der Funktionsweise der Schnittstellen und zur Beurteilung der Wirksamkeit des SAR wurden in der Studie mehrere exemplarische Fälle der letzten Jahre im Detail untersucht. Alle diese Fälle weisen einen starken, aber unterschiedlich ge­arteten Bezug zum SAR auf. Es wurden bewusst Fälle aus unterschiedlichen Luftfahrzeugkategorien und mit unterschiedlichen betrieblichen Hintergründen ausgewählt.
+
+            Bei einem dieser Fälle verunfallte ein Pilot mit einem Segelflugzeug anlässlich eines Segelflugwettbewerbs im Gebirge nahe der Grenze zu Österreich und kam dabei ums Leben. Das Segelflugzeug wurde beim Aufprall zerstört, der 406-MHz-Notsender an Bord wurde aus dem Segelflugzeug gerissen, beschädigt und von seiner Sendeantenne getrennt, so dass keine Notsignale emp­fangbar waren. Im Flugzeug war ein im Bordrechner integriertes Flarm-System eingebaut. Das Mobiltelefon des Piloten wurde nicht gefunden.
+
+            Dieser Fall wurde exemplarisch ausgewählt und wird hier inhaltlich stark gekürzt und vereinfacht zur Illustration der SAR-Aktionen dargestellt. Es besteht daher kein Anspruch, allgemeingültige Rückschlüsse zu erlauben.
       article#zeitleiste.timeline
         .container
+
           ul
             each event in events
               li(data-scroll)

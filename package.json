@@ -28,12 +28,12 @@
     "gulp-pug": "^3.1.0",
     "gulp-sass": "^2.3.2",
     "gulp-watch": "^4.3.10",
+    "pug-filters": "^1.2.4",
     "reset-css": "^2.2.0",
     "sass-module-importer": "^1.2.1",
     "scrolltrigger-classes": "^0.3.2",
-    "webpack-stream": "^3.2.0"
-  },
-  "dependencies": {
+    "webpack-stream": "^3.2.0",
+    "jstransformer-markdown-it": "^2.0.0",
     "node-yaml": "^3.0.3"
   }
 }
