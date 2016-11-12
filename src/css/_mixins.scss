@@ -1,0 +1,48 @@
+// Background Blue
+
+@mixin blue{
+	background: $blue;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+}
+
+// Border Radius
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+// Flexbox
+
+@mixin flex-container($justify:flex-start) {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content:$justify;
+}
+
+@mixin flex-item($width: 50%) {
+	flex: 0 1 $width;
+}
+
+// Float
+
+@mixin float-left($width: 50%) {
+  float: left;
+  width: $width;
+}
+
+// Clearfix
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Transition
+
+@mixin transition($property, $duration){
+    transition: $property $duration;
+}

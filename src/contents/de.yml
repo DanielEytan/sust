@@ -1,0 +1,82 @@
+events:
+  - title: Zeit
+    event: Ereignis
+  - title: 00h 00min
+    event: Unfall
+  - title: 01h 30min
+    event: Über Flugfunk und Mobiltelefon wird vom Startplatz aus versucht, den Piloten
+      des Segelflugzeuges zu erreichen.
+  - title: 02h 30min
+    event: Zwei Piloten versuchen, den Piloten über verschiedene Flugfunkfrequenzen
+      aus Segelflugzeugen in der Luft zu kontaktieren.
+  - title: 03h 20min
+    event: Reisemotorsegler starten vom Startplatz aus zu Suchflügen ins Fluggebiet
+      des Segelflugwettbewerbs.
+  - title: 03h 45min
+    event: Das RCC wird über das vermisste Segelflugzeug informiert.
+  - title: 04h 15min
+    event: Der Hersteller des Kollisionswarnsystems Flarm liefert dem RCC erste Auswertungsresultate
+      der Flugwegrekonsliuktion mit vermuteter letzter Position des Segelflugzeuges.
+  - title: 04h 17min
+    event: Das Fedpol meldet dem RCC, dass das Mobiltelefon des Piloten nirgends eingeloggt
+      sei.
+  - title: 04h 25min
+    event: Das FIC Zürich teilt dem RCC mit, dass nie ein Segelflieger auf seiner Frequenz
+      gewesen sei.
+  - title: 04h 30min
+    event: Das RCC informiert den SDO der LW, dass mit einem Einsatz zu rechnen sei;
+      es würden noch weitere Auswertungen des Flarm-Herstellers abgewartet.
+  - title: 04h 47min
+    event: Der Flarm-Hersteller liefert dem RCC neue Auswertungsresultate mit einer
+      rekonsliuierten Position des Segelflugzeuges, die – wie sich später zeigen wird
+      – etwa 100 m von der tatsächlichen Unfallstelle entfernt liegt.
+  - title: 05h 07min
+    event: Die HEZ der Rega bietet den Rettungshelikopter der Basis Untervaz für einen
+      Suchflug auf.
+  - title: 05h 30min
+    event: Die HEZ, der Rega-Pilot und der Flarm-Hersteller besprechen das primäre Suchgebiet.
+  - title: 06h 20min
+    event: Der SDO informiert das RCC, dass der SAR-Helikopter um 23 Uhr ab Payerne
+      starten wird.
+  - title: 06h 50min
+    event: Die ACC Zürich meldet, dass Luftfahrzeuge keine Notsignale gemeldet hätten.
+  - title: 06h 58min
+    event: Das BAKOM meldet, dass von Bodenantennen keine Notsignale empfangen wurden.
+  - title: 07h 20min
+    event: Das RCC informiert sich bei Personen auf dem Startplatz über die abzufliegende
+      Wettbewerbsaufgabe und den fliegerischen Hintergrund des Piloten.
+  - title: 09h 24min
+    event: Das Fedpol und das RCC sind übereinstimmend der Meinung, dass das Suchgebiet
+      für den Einsatz eines IMSI-catcher noch zu gross sei.
+  - title: 09h 45min
+    event: Der SAR-Helikopter landet nach einer erfolglosen Suchaktion in Frauenkirch.
+  - title: 12h 07min
+    event: Die Besatzung des SAR-Helikopters informiert das RCC, dass sie vor 5 Uhr
+      zu einem weiteren Suchflug starten werde.
+  - title: 13h 40min
+    event: Das RCC wird informiert, dass ein Helikopter des BAZL um 7 Uhr in Untervaz
+      landen werde.
+  - title: 14h 38min
+    event: Das RCC fragt das RCC Wien an, ob sie einen bis zwei Helikopter in den Teil
+      des Suchgebiets, der auf österreichischem Staatsgebiet liegt, schicken könnten.
+  - title: 15h 19min
+    event: Das RCC wird informiert, dass ein Briefing mit den Besatzungen des SAR-,
+      des Rega- und des BAZL-Helikopters stattgefunden habe.
+  - title: 15h 40min
+    event: Das RCC wird informiert, dass der BAZL-Helikopter zu einem Suchflug ab Untervaz
+      starten würde und dass drei Helikopter der LW folgen würden.
+  - title: 15h 41min
+    event: Das RCC Wien informiert, dass ein Helikopter ab ca. 09:30 Uhr das Suchgebiet
+      auf österreichischem Staatsgebiet abfliegen werde.
+  - title: 16h 00min
+    event: Personen auf dem Startplatz bringen das persönliche Login des Piloten zur
+      Ortung seines Mobiltelefons in Erfahrung.
+  - title: 16h 32min
+    event: Die Kantonspolizei informiert, dass die Ortung des Mobiltelefons des Piloten
+      ergebnislos geblieben und das Suchgebiet für den Einsatz des IMSI-catcher zu gross
+      sei.
+  - title: 18h 45min
+    event: Das Wrack des Segelflugzeuges wird aus einem Helikopter der Luftwaffe gesichtet.
+      Die Koordinaten des Unfallorts werden dem RCC mitgeteilt.
+  - title: 19h 30min
+    event: Am Unfallort kann der Rega-Arzt nur noch den Tod des Piloten feststellen.
