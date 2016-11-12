@@ -10,7 +10,10 @@ var pug = require('gulp-pug');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 var webpack = require('webpack-stream');
-const autoprefixer = require('gulp-autoprefixer');
+var autoprefixer = require('gulp-autoprefixer');
+var data = require('gulp-data');
+var yaml = require('node-yaml');
+
 
 var folders = {
   src: 'src/',
@@ -22,7 +25,8 @@ var files = {
   fonts: folders.src + 'font/**/*.{ttf,woff,eof,eot,css,svg,otf}',
   images: folders.src + 'image/*',
   pug: folders.src + '*.pug',
-  js: folders.src + '/**/*.js'
+  js: folders.src + '/**/*.js',
+  contents: folders.src + 'contents/de.yml',
 };
 
 gulp.task('js', function() {
@@ -47,6 +51,9 @@ gulp.task('clean', function(){
 
 gulp.task('html', function buildHTML() {
   return gulp.src(files.pug)
+  .pipe(data(function(file) {
+    return yaml.read(files.contents, {});
+  }))
   .pipe(pug({
     pretty:  true,
     client:  false,
@@ -87,6 +94,7 @@ gulp.task('serve', function() {
   gulp.watch(files.images).on('change', gulp.series('images', reload));
   gulp.watch(files.sass).on('change', gulp.series('sass', reload));
   gulp.watch(files.js).on('change', gulp.series('js', reload));
+  gulp.watch(files.contents).on('change', gulp.series('html', reload));
 });
 
 gulp.task('all', gulp.parallel('copy:fonts', 'images', 'sass', 'html', 'js'));

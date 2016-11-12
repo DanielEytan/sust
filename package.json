@@ -23,13 +23,17 @@
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean": "^0.3.2",
+    "gulp-data": "^1.2.1",
     "gulp-imagemin": "^3.1.1",
     "gulp-pug": "^3.1.0",
     "gulp-sass": "^2.3.2",
     "gulp-watch": "^4.3.10",
+    "reset-css": "^2.2.0",
     "sass-module-importer": "^1.2.1",
     "scrolltrigger-classes": "^0.3.2",
-    "webpack-stream": "^3.2.0",
-    "reset-css": "^2.2.0"
+    "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "node-yaml": "^3.0.3"
   }
 }
