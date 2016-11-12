@@ -83,16 +83,17 @@
 					}
 					&.is-hidden {
 						opacity: 0;
-						transition: 366ms transform cubic-bezier(.52,.01,.16,1) 100ms, 200ms opacity 200ms;
-						transform: translate(0,-100%);
-						transform-origin: 50% 0;
+						transition: 366ms transform cubic-bezier(.52,.01,.16,1) 100ms,
+									200ms opacity linear 200ms;
+						transform: translate3d(0,100%,0);
 						backface-visibilty: hidden;
 					}
 					&.is-visible {
 						opacity: 1;
-						transition: 366ms transform cubic-bezier(.52,.01,.16,1) 100ms, 200ms opacity 200ms;
-						transform: translate(0,0);
-						transform-origin: 50% 0;
+						transition: 366ms transform cubic-bezier(.52,.01,.16,1) 100ms,
+									200ms opacity linear 200ms;
+						transform: translate3d(0,0,0);
+						backface-visibilty: hidden;
 					}
 				}
 			}
