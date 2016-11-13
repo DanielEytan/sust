@@ -5,6 +5,7 @@
 	article {
 		&.intro {
 			@include blue;
+			position: relative;
 		}
 		&.organisation {
 			color: $blue;
