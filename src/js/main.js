@@ -50,8 +50,11 @@ function createCloud (minParticles, maxParticles, depth){
   }
 
   $cloud.style.top = ( Math.random() * 100 ) + "%";
-  $cloud.style.left =  ( Math.random() * 100 ) + "%";
-
+  if ( Math.random() > .3 ) {
+    $cloud.style.left = ( 70 + (Math.random() * 30) ) + "%";
+  } else {
+    $cloud.style.left = -30 + (Math.random() * -20) + "%";
+  }
   cloud.setAttr('transform', 'z', ((Math.random() < 0.5 ? -1 : 1) * Math.random() * 100) + depth );
   cloud.applyStyle();
 
@@ -71,9 +74,17 @@ for(var j = 0; j < 50; j++) {
 
 var i = 0;
 
+var height = null;
+
+var body = document.body,
+    html = document.documentElement;
+
+var $parent = $mother.parentElement;
+
 function setSize() {
-  world.setAttr('transform', 'x', window.innerWidth * -.4);
-  world.setAttr('transform', 'y', window.innerHeight * -.4);
+  world.setAttr('transform', 'x', window.innerWidth * -.4)
+       .setAttr('transform', 'y', window.innerHeight * -.4);
+  height = $parent.getBoundingClientRect().height + $parent.getBoundingClientRect().top;
 }
 
 setSize();
@@ -83,11 +94,14 @@ window.addEventListener('resize', setSize);
 var speed = 0.75;
 var max = -max;
 var direction = -1;
+var progress = 0;
 
 function loop (){
-  i = i + (direction * speed);
+  i += .25; /*(direction * speed) */
 
-  world.setAttr('transform', 'z', i);
+  progress = (window.scrollY + window.innerHeight) / height;
+
+  world.setAttr('transform', 'z', (progress * (direction * speed) * 1000) - i);
   world.applyStyle();
 
   world.children.forEach(function(cloudy){
@@ -104,6 +118,7 @@ function loop (){
 
 // starts loop
 loop();
+
 
 /* class toggeling */
 window.menuFunction = function()

@@ -25,7 +25,7 @@ var files = {
   fonts: folders.src + 'font/**/*.{ttf,woff,eof,eot,css,svg,otf}',
   images: folders.src + 'image/*',
   pug: folders.src + '*.pug',
-  js: folders.src + '/**/*.js',
+  js: folders.src + '**/*.js',
   contents: folders.src + 'contents/de.yml',
 };
 
