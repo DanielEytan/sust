@@ -105,7 +105,7 @@ function loop (){
   world.applyStyle();
 
   world.children.forEach(function(cloudy){
-    cloudy.setAttr('rotation', 'z', i * .015);
+    cloudy.setAttr('rotation', 'z', i * .015 * progress);
     cloudy.applyStyle();
   });
 
