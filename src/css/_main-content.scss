@@ -6,6 +6,16 @@
 		&.intro {
 			@include blue;
 			position: relative;
+			.container {
+				position: relative;
+				z-index: 3;
+				text-shadow: 1px 1px 0 $blue,
+							 -1px -1px 0 $blue,
+							 0 -1px 0 $blue,
+							 -1px 0 0 $blue,
+							 1px 0 0 $blue,
+							 0 1px 0 $blue;
+			}
 		}
 		&.organisation {
 			color: $blue;
