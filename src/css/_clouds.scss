@@ -1,0 +1,33 @@
+.world {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    perspective: 1200px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+
+.mother {
+    position: absolute;
+    width: 80%; height: 80%;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    transform-style: preserve-3d;
+}
+
+.cloud, .cloudPart {
+    position: absolute;
+    width: 256px; height: 256px;
+    margin: -128px 0 0 -128px;
+    top: 0; left: 0;
+}
+
+.cloud {
+    transform-style: preserve-3d;
+}
+
+.cloudPart {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/102565/cloud.png) no-repeat;
+    background-size: 100% auto;
+}
+

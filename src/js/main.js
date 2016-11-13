@@ -24,13 +24,14 @@ function createCloud (minParticles, maxParticles, depth){
   var x,y,z,a,s, $cloud, $cloudPart, cloud, cloudPart;
 
   $cloud = d.createElement('div');
-  $cloud.classLIst.add('cloud');
+  $cloud.classList.add('cloud');
+
   cloud = new Css3d($cloud);
   depth = depth || 0;
 
   for(i = 0; i < (minParticles || 2) + Math.round( Math.random() * ( maxParticles || 10) ); i++){
     $cloudPart = d.createElement('div');
-    $cloudPart.classLIst.add('cloudPart');
+    $cloudPart.classList.add('cloudPart');
 
     x = 256 - ( Math.random() * 256 );
     y = 256 - ( Math.random() * 256 );
@@ -39,24 +40,72 @@ function createCloud (minParticles, maxParticles, depth){
     s = 0.25 + Math.random();
 
     cloudPart = new Css3d($cloudPart);
-    cloudPart.set('position', x, y, z);
-    cloudPart.setAttr('rotation', 'z', a);
-    cloudPart.setAttr('scale', 'x', s);
-    cloudPart.setAttr('scale', 'y', s);
-    cloudPart.applyStyle();
+    cloudPart.set('transform', x, y, z)
+             .setAttr('rotation', 'z', a)
+             .setAttr('scale', 'x', s)
+             .setAttr('scale', 'y', s)
+             .applyStyle();
+
     cloud.addChild(cloudPart);
   }
 
   $cloud.style.top = ( Math.random() * 100 ) + "%";
   $cloud.style.left =  ( Math.random() * 100 ) + "%";
 
-  cloud.setAttr('position', 'z', ((Math.random() < 0.5 ? -1 : 1) * Math.random() * 100) + depth );
+  cloud.setAttr('transform', 'z', ((Math.random() < 0.5 ? -1 : 1) * Math.random() * 100) + depth );
   cloud.applyStyle();
 
   return cloud;
 };
 
+var $mother = d.querySelector('.js-mother');
 
+var world = new Css3d($mother);
+
+var max = 0;
+
+for(var j = 0; j < 50; j++) {
+  max = j * 175;
+  world.addChild( createCloud(1,5,max) );
+}
+
+var i = 0;
+
+function setSize() {
+  world.setAttr('transform', 'x', window.innerWidth * -.4);
+  world.setAttr('transform', 'y', window.innerHeight * -.4);
+}
+
+setSize();
+
+window.addEventListener('resize', setSize);
+
+var speed = 0.75;
+var max = -max;
+var direction = -1;
+
+function loop (){
+  i = i + (direction * speed);
+
+  world.setAttr('transform', 'z', i);
+  world.applyStyle();
+
+  world.children.forEach(function(cloudy){
+    cloudy.setAttr('rotation', 'z', i * .015);
+    cloudy.applyStyle();
+  });
+
+  if(i < max && direction == -1) {
+    direction = 1;
+  }
+
+  requestAnimationFrame(loop);
+};
+
+// starts loop
+loop();
+
+/* class toggeling */
 window.menuFunction = function()
 {
     document.getElementById("nav-glossary").classList.add("menu-active");
