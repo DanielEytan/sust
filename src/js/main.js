@@ -81,6 +81,7 @@ var body = document.body,
 
 var $parent = $mother.parentElement;
 
+
 function setSize() {
   world.setAttr('transform', 'x', window.innerWidth * -.4)
        .setAttr('transform', 'y', window.innerHeight * -.4);
@@ -89,19 +90,23 @@ function setSize() {
 
 setSize();
 
+var startDepth = -4000;
+
+world.setAttr('transform', 'z', startDepth);
+
 window.addEventListener('resize', setSize);
 
 var speed = 0.75;
 var max = -max;
-var direction = -1;
+var direction = 1;
 var progress = 0;
 
 function loop (){
-  i += .25; /*(direction * speed) */
+  i -= .25; /*(direction * speed) */
 
   progress = (window.scrollY + window.innerHeight) / height;
 
-  world.setAttr('transform', 'z', (progress * (direction * speed) * 1000) - i);
+  world.setAttr('transform', 'z', startDepth + (progress * (direction * speed) * 1000) - i);
   world.applyStyle();
 
   world.children.forEach(function(cloudy){
