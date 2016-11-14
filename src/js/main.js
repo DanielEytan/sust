@@ -1,7 +1,40 @@
 'use strict';
 
+(function getPerspective(){
+  var element = document.createElement('p'),
+      html = document.getElementsByTagName('HTML')[0],
+      body = document.getElementsByTagName('BODY')[0],
+      propertys = {
+        'webkitTransformStyle':'-webkit-transform-style',
+        'MozTransformStyle':'-moz-transform-style',
+        'msTransformStyle':'-ms-transform-style',
+        'transformStyle':'transform-style'
+      };
+
+    body.insertBefore(element, null);
+
+    for (var i in propertys) {
+        if (element.style[i] !== undefined) {
+            element.style[i] = "preserve-3d";
+        }
+    }
+
+    var st = window.getComputedStyle(element, null),
+        transform = st.getPropertyValue("-webkit-transform-style") ||
+                    st.getPropertyValue("-moz-transform-style") ||
+                    st.getPropertyValue("-ms-transform-style") ||
+                    st.getPropertyValue("transform-style");
+
+    if(transform!=='preserve-3d'){
+      html.className += 'no-preserve-3d';
+    }
+    document.body.removeChild(element);
+
+})();
+
 /* scroll things */
 var ScrollTrigger = require('scrolltrigger-classes');
+var html = document.getElementsByTagName('HTML')[0]
 
 var trigger = new ScrollTrigger({
   toggle: {
@@ -60,69 +93,71 @@ function createCloud (minParticles, maxParticles, depth){
 
   return cloud;
 };
+// makes sure the browser actually supports perspective
+if ( ! html.classList.contains('no-preserve-3d') ) {
+  var $mother = d.querySelector('.js-mother');
 
-var $mother = d.querySelector('.js-mother');
+  var world = new Css3d($mother);
 
-var world = new Css3d($mother);
+  var max = 0;
 
-var max = 0;
-
-for(var j = 0; j < 50; j++) {
-  max = j * 175;
-  world.addChild( createCloud(1,5,max) );
-}
-
-var i = 0;
-
-var height = null;
-
-var body = document.body,
-    html = document.documentElement;
-
-var $parent = $mother.parentElement;
-
-
-function setSize() {
-  world.setAttr('transform', 'x', window.innerWidth * -.4)
-       .setAttr('transform', 'y', window.innerHeight * -.4);
-  height = $parent.getBoundingClientRect().height + $parent.getBoundingClientRect().top;
-}
-
-setSize();
-
-var startDepth = -4000;
-
-world.setAttr('transform', 'z', startDepth);
-
-window.addEventListener('resize', setSize);
-
-var speed = 0.75;
-var max = -max;
-var direction = 1;
-var progress = 0;
-
-function loop (){
-  i -= .25; /*(direction * speed) */
-
-  progress = (window.scrollY + window.innerHeight) / height;
-
-  world.setAttr('transform', 'z', startDepth + (progress * (direction * speed) * 1000) - i);
-  world.applyStyle();
-
-  world.children.forEach(function(cloudy){
-    cloudy.setAttr('rotation', 'z', i * .015);
-    cloudy.applyStyle();
-  });
-
-  if(i < max && direction == -1) {
-    direction = 1;
+  for(var j = 0; j < 50; j++) {
+    max = j * 175;
+    world.addChild( createCloud(1,5,max) );
   }
 
-  requestAnimationFrame(loop);
-};
+  var i = 0;
 
-// starts loop
-loop();
+  var height = null;
+
+  var body = document.body,
+      html = document.documentElement;
+
+  var $parent = $mother.parentElement;
+
+
+  function setSize() {
+    world.setAttr('transform', 'x', window.innerWidth * -.4)
+         .setAttr('transform', 'y', window.innerHeight * -.4);
+    height = $parent.getBoundingClientRect().height + $parent.getBoundingClientRect().top;
+  }
+
+  setSize();
+
+  var startDepth = -4000;
+
+  world.setAttr('transform', 'z', startDepth);
+
+  window.addEventListener('resize', setSize);
+
+  var speed = 0.75;
+  var max = -max;
+  var direction = 1;
+  var progress = 0;
+
+  function loop (){
+    i -= .25; /*(direction * speed) */
+
+    progress = (window.scrollY + window.innerHeight) / height;
+
+    world.setAttr('transform', 'z', startDepth + (progress * (direction * speed) * 1000) - i);
+    world.applyStyle();
+
+    world.children.forEach(function(cloudy){
+      cloudy.setAttr('rotation', 'z', i * .015);
+      cloudy.applyStyle();
+    });
+
+    if(i < max && direction == -1) {
+      direction = 1;
+    }
+
+    requestAnimationFrame(loop);
+  };
+
+  // starts loop
+  loop();
+}
 
 
 /* class toggeling */
